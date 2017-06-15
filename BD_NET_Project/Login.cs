@@ -16,5 +16,10 @@ namespace BD_NET_Project
         {
             InitializeComponent();
         }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
