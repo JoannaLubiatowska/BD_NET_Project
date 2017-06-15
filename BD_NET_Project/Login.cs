@@ -19,7 +19,29 @@ namespace BD_NET_Project
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            bool IsOpen = false;
 
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "MainAdminWindow")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                if (textBoxLogin.Text == "AdminNET" && textBoxPassword.Text == "12345")
+                {
+                    MainAdminWindow w = new MainAdminWindow();
+                    w.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Login lub hasło nieprawidłowe. Spróbuj ponownie.");
+                }
+            }
         }
     }
 }

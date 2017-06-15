@@ -32,8 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // LoginButton
@@ -70,13 +70,7 @@
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(182, 20);
             this.textBoxLogin.TabIndex = 3;
-            // 
-            // textBoxPassword
-            // 
-            this.textBoxPassword.Location = new System.Drawing.Point(71, 115);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(182, 20);
-            this.textBoxPassword.TabIndex = 4;
+            this.textBoxLogin.Text = "AdminNET";
             // 
             // label3
             // 
@@ -87,13 +81,21 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Logowanie";
             // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.Location = new System.Drawing.Point(71, 115);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(182, 20);
+            this.textBoxPassword.TabIndex = 6;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 227);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -111,8 +113,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxLogin;
-        private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxPassword;
     }
 }
 
