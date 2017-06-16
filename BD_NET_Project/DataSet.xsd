@@ -380,6 +380,31 @@ SELECT ID_SECTION, SECTION_NAME FROM SECTIONS WHERE (ID_SECTION = @ID_SECTION)</
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_BookTableAdapter" GeneratorDataComponentClassName="View_BookTableAdapter" Name="View_Book" UserDataComponentName="View_BookTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LIBRARYConnectionString (Settings)" DbObjectName="LIBRARY.dbo.View_Book" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Tytuł, [Imię autora]]], [Nazwisko autora], Wydawnictwo, Dział, ID, [Data wydania], Okładka, Opis, ISBN FROM dbo.View_Book</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Tytuł" DataSetColumn="Tytuł" />
+              <Mapping SourceColumn="Imię autora]" DataSetColumn="Imię autora]" />
+              <Mapping SourceColumn="Nazwisko autora" DataSetColumn="Nazwisko autora" />
+              <Mapping SourceColumn="Wydawnictwo" DataSetColumn="Wydawnictwo" />
+              <Mapping SourceColumn="Dział" DataSetColumn="Dział" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Data wydania" DataSetColumn="Data wydania" />
+              <Mapping SourceColumn="Okładka" DataSetColumn="Okładka" />
+              <Mapping SourceColumn="Opis" DataSetColumn="Opis" />
+              <Mapping SourceColumn="ISBN" DataSetColumn="ISBN" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -531,6 +556,64 @@ SELECT ID_SECTION, SECTION_NAME FROM SECTIONS WHERE (ID_SECTION = @ID_SECTION)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="View_Book" msprop:Generator_TableClassName="View_BookDataTable" msprop:Generator_TableVarName="tableView_Book" msprop:Generator_TablePropName="View_Book" msprop:Generator_RowDeletingName="View_BookRowDeleting" msprop:Generator_RowChangingName="View_BookRowChanging" msprop:Generator_RowEvHandlerName="View_BookRowChangeEventHandler" msprop:Generator_RowDeletedName="View_BookRowDeleted" msprop:Generator_UserTableName="View_Book" msprop:Generator_RowChangedName="View_BookRowChanged" msprop:Generator_RowEvArgName="View_BookRowChangeEvent" msprop:Generator_RowClassName="View_BookRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tytuł" msprop:Generator_ColumnVarNameInTable="columnTytuł" msprop:Generator_ColumnPropNameInRow="Tytuł" msprop:Generator_ColumnPropNameInTable="TytułColumn" msprop:Generator_UserColumnName="Tytuł">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Imię_x0020_autora_x005D_" msprop:Generator_ColumnVarNameInTable="_columnImię_autora_" msprop:Generator_ColumnPropNameInRow="_Imię_autora_" msprop:Generator_ColumnPropNameInTable="_Imię_autora_Column" msprop:Generator_UserColumnName="Imię autora]">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nazwisko_x0020_autora" msprop:Generator_ColumnVarNameInTable="columnNazwisko_autora" msprop:Generator_ColumnPropNameInRow="Nazwisko_autora" msprop:Generator_ColumnPropNameInTable="Nazwisko_autoraColumn" msprop:Generator_UserColumnName="Nazwisko autora">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Wydawnictwo" msprop:Generator_ColumnVarNameInTable="columnWydawnictwo" msprop:Generator_ColumnPropNameInRow="Wydawnictwo" msprop:Generator_ColumnPropNameInTable="WydawnictwoColumn" msprop:Generator_UserColumnName="Wydawnictwo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dział" msprop:Generator_ColumnVarNameInTable="columnDział" msprop:Generator_ColumnPropNameInRow="Dział" msprop:Generator_ColumnPropNameInTable="DziałColumn" msprop:Generator_UserColumnName="Dział">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Data_x0020_wydania" msprop:Generator_ColumnVarNameInTable="columnData_wydania" msprop:Generator_ColumnPropNameInRow="Data_wydania" msprop:Generator_ColumnPropNameInTable="Data_wydaniaColumn" msprop:Generator_UserColumnName="Data wydania" type="xs:int" />
+              <xs:element name="Okładka" msprop:Generator_ColumnVarNameInTable="columnOkładka" msprop:Generator_ColumnPropNameInRow="Okładka" msprop:Generator_ColumnPropNameInTable="OkładkaColumn" msprop:Generator_UserColumnName="Okładka" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Opis" msprop:Generator_ColumnVarNameInTable="columnOpis" msprop:Generator_ColumnPropNameInRow="Opis" msprop:Generator_ColumnPropNameInTable="OpisColumn" msprop:Generator_UserColumnName="Opis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ISBN" msprop:Generator_ColumnVarNameInTable="columnISBN" msprop:Generator_ColumnPropNameInRow="ISBN" msprop:Generator_ColumnPropNameInTable="ISBNColumn" msprop:Generator_UserColumnName="ISBN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -556,6 +639,10 @@ SELECT ID_SECTION, SECTION_NAME FROM SECTIONS WHERE (ID_SECTION = @ID_SECTION)</
     <xs:unique name="SECTIONS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:SECTIONS" />
       <xs:field xpath="mstns:ID_SECTION" />
+    </xs:unique>
+    <xs:unique name="View_Book_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Book" />
+      <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

@@ -17,19 +17,31 @@ namespace BD_NET_Project
             InitializeComponent();
         }
 
-        private void bOOKSBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void BookManagement_Load(object sender, EventArgs e)
         {
-            this.Validate();
-            this.bOOKSBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dataSet);
+            // TODO: This line of code loads data into the 'dataSet.View_Book' table. You can move, or remove it, as needed.
+            this.view_BookTableAdapter.Fill(this.dataSet.View_Book);
 
         }
 
-        private void BookManagement_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet.BOOKS' table. You can move, or remove it, as needed.
-            this.bOOKSTableAdapter.Fill(this.dataSet.BOOKS);
+            bool IsOpen = false;
 
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "BookEditWindow")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                BookEditWindow w = new BookEditWindow();
+                w.Show();
+            }
         }
     }
 }

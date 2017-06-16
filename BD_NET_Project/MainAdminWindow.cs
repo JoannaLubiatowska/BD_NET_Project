@@ -41,42 +41,38 @@ namespace BD_NET_Project
 
         private void buttonSection_Click(object sender, EventArgs e)
         {
-
+            if (openNextWindow("SectionManagement"))
+            {
+                SectionManagement b = new SectionManagement();
+                b.Show();
+            }
         }
 
         private void buttonPublishing_Click(object sender, EventArgs e)
         {
-
+            if (openNextWindow("PublishingManagement"))
+            {
+                PublishingManagement b = new PublishingManagement();
+                b.Show();
+            }
         }
 
         private void buttonUser_Click(object sender, EventArgs e)
         {
-
+            if (openNextWindow("UserManagement"))
+            {
+                UserManagement b = new UserManagement();
+                b.Show();
+            }
         }
 
         private void buttonTransaction_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void buttonBookStatistic_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonAuthorStatistic_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonSectionStatistic_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonPublishingStatistic_Click(object sender, EventArgs e)
-        {
-
+            if (openNextWindow("TransactionManagement"))
+            {
+                TransactionManagement b = new TransactionManagement();
+                b.Show();
+            }  
         }
 
         private void buttonUserStatistic_Click(object sender, EventArgs e)

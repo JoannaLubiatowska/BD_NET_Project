@@ -1,6 +1,6 @@
 ﻿namespace BD_NET_Project
 {
-    partial class SectionManagement
+    partial class PublishingManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SectionManagement));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PublishingManagement));
             this.dataSet = new BD_NET_Project.DataSet();
-            this.sECTIONSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sECTIONSTableAdapter = new BD_NET_Project.DataSetTableAdapters.SECTIONSTableAdapter();
+            this.pUBLISHING_HOUSESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pUBLISHING_HOUSESTableAdapter = new BD_NET_Project.DataSetTableAdapters.PUBLISHING_HOUSESTableAdapter();
             this.tableAdapterManager = new BD_NET_Project.DataSetTableAdapters.TableAdapterManager();
-            this.sECTIONSBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.pUBLISHING_HOUSESBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -46,15 +46,15 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.sECTIONSBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.sECTIONSDataGridView = new System.Windows.Forms.DataGridView();
+            this.pUBLISHING_HOUSESBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.pUBLISHING_HOUSESDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sECTIONSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sECTIONSBindingNavigator)).BeginInit();
-            this.sECTIONSBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sECTIONSDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pUBLISHING_HOUSESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pUBLISHING_HOUSESBindingNavigator)).BeginInit();
+            this.pUBLISHING_HOUSESBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pUBLISHING_HOUSESDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // dataSet
@@ -62,14 +62,14 @@
             this.dataSet.DataSetName = "DataSet";
             this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // sECTIONSBindingSource
+            // pUBLISHING_HOUSESBindingSource
             // 
-            this.sECTIONSBindingSource.DataMember = "SECTIONS";
-            this.sECTIONSBindingSource.DataSource = this.dataSet;
+            this.pUBLISHING_HOUSESBindingSource.DataMember = "PUBLISHING_HOUSES";
+            this.pUBLISHING_HOUSESBindingSource.DataSource = this.dataSet;
             // 
-            // sECTIONSTableAdapter
+            // pUBLISHING_HOUSESTableAdapter
             // 
-            this.sECTIONSTableAdapter.ClearBeforeFill = true;
+            this.pUBLISHING_HOUSESTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -77,18 +77,18 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BOOKSTableAdapter = null;
             this.tableAdapterManager.LIB_TRANSACTIONTableAdapter = null;
-            this.tableAdapterManager.PUBLISHING_HOUSESTableAdapter = null;
-            this.tableAdapterManager.SECTIONSTableAdapter = this.sECTIONSTableAdapter;
+            this.tableAdapterManager.PUBLISHING_HOUSESTableAdapter = this.pUBLISHING_HOUSESTableAdapter;
+            this.tableAdapterManager.SECTIONSTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = BD_NET_Project.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.USERSTableAdapter = null;
             // 
-            // sECTIONSBindingNavigator
+            // pUBLISHING_HOUSESBindingNavigator
             // 
-            this.sECTIONSBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.sECTIONSBindingNavigator.BindingSource = this.sECTIONSBindingSource;
-            this.sECTIONSBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.sECTIONSBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.sECTIONSBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pUBLISHING_HOUSESBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.pUBLISHING_HOUSESBindingNavigator.BindingSource = this.pUBLISHING_HOUSESBindingSource;
+            this.pUBLISHING_HOUSESBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.pUBLISHING_HOUSESBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.pUBLISHING_HOUSESBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -100,17 +100,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.sECTIONSBindingNavigatorSaveItem});
-            this.sECTIONSBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.sECTIONSBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.sECTIONSBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.sECTIONSBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.sECTIONSBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.sECTIONSBindingNavigator.Name = "sECTIONSBindingNavigator";
-            this.sECTIONSBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.sECTIONSBindingNavigator.Size = new System.Drawing.Size(289, 25);
-            this.sECTIONSBindingNavigator.TabIndex = 0;
-            this.sECTIONSBindingNavigator.Text = "bindingNavigator1";
+            this.pUBLISHING_HOUSESBindingNavigatorSaveItem});
+            this.pUBLISHING_HOUSESBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.pUBLISHING_HOUSESBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.pUBLISHING_HOUSESBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.pUBLISHING_HOUSESBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.pUBLISHING_HOUSESBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.pUBLISHING_HOUSESBindingNavigator.Name = "pUBLISHING_HOUSESBindingNavigator";
+            this.pUBLISHING_HOUSESBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.pUBLISHING_HOUSESBindingNavigator.Size = new System.Drawing.Size(315, 25);
+            this.pUBLISHING_HOUSESBindingNavigator.TabIndex = 0;
+            this.pUBLISHING_HOUSESBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -197,57 +197,58 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // sECTIONSBindingNavigatorSaveItem
+            // pUBLISHING_HOUSESBindingNavigatorSaveItem
             // 
-            this.sECTIONSBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.sECTIONSBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("sECTIONSBindingNavigatorSaveItem.Image")));
-            this.sECTIONSBindingNavigatorSaveItem.Name = "sECTIONSBindingNavigatorSaveItem";
-            this.sECTIONSBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.sECTIONSBindingNavigatorSaveItem.Text = "Save Data";
-            this.sECTIONSBindingNavigatorSaveItem.Click += new System.EventHandler(this.sECTIONSBindingNavigatorSaveItem_Click);
+            this.pUBLISHING_HOUSESBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.pUBLISHING_HOUSESBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("pUBLISHING_HOUSESBindingNavigatorSaveItem.Image")));
+            this.pUBLISHING_HOUSESBindingNavigatorSaveItem.Name = "pUBLISHING_HOUSESBindingNavigatorSaveItem";
+            this.pUBLISHING_HOUSESBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.pUBLISHING_HOUSESBindingNavigatorSaveItem.Text = "Save Data";
+            this.pUBLISHING_HOUSESBindingNavigatorSaveItem.Click += new System.EventHandler(this.pUBLISHING_HOUSESBindingNavigatorSaveItem_Click);
             // 
-            // sECTIONSDataGridView
+            // pUBLISHING_HOUSESDataGridView
             // 
-            this.sECTIONSDataGridView.AutoGenerateColumns = false;
-            this.sECTIONSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sECTIONSDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.pUBLISHING_HOUSESDataGridView.AutoGenerateColumns = false;
+            this.pUBLISHING_HOUSESDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pUBLISHING_HOUSESDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.sECTIONSDataGridView.DataSource = this.sECTIONSBindingSource;
-            this.sECTIONSDataGridView.Location = new System.Drawing.Point(21, 41);
-            this.sECTIONSDataGridView.Name = "sECTIONSDataGridView";
-            this.sECTIONSDataGridView.Size = new System.Drawing.Size(243, 358);
-            this.sECTIONSDataGridView.TabIndex = 1;
+            this.pUBLISHING_HOUSESDataGridView.DataSource = this.pUBLISHING_HOUSESBindingSource;
+            this.pUBLISHING_HOUSESDataGridView.Location = new System.Drawing.Point(12, 37);
+            this.pUBLISHING_HOUSESDataGridView.Name = "pUBLISHING_HOUSESDataGridView";
+            this.pUBLISHING_HOUSESDataGridView.Size = new System.Drawing.Size(293, 362);
+            this.pUBLISHING_HOUSESDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_SECTION";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_PUBLISHING_HOUSE";
             this.dataGridViewTextBoxColumn1.HeaderText = "ID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "SECTION_NAME";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Dział";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "PUBLISHING_NAME";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Wydawnictwo";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
-            // SectionManagement
+            // PublishingManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(289, 411);
-            this.Controls.Add(this.sECTIONSDataGridView);
-            this.Controls.Add(this.sECTIONSBindingNavigator);
-            this.Name = "SectionManagement";
-            this.Text = "SectionManagement";
-            this.Load += new System.EventHandler(this.SectionManagement_Load);
+            this.ClientSize = new System.Drawing.Size(315, 411);
+            this.Controls.Add(this.pUBLISHING_HOUSESDataGridView);
+            this.Controls.Add(this.pUBLISHING_HOUSESBindingNavigator);
+            this.Name = "PublishingManagement";
+            this.Text = "PublishingManagement";
+            this.Load += new System.EventHandler(this.PublishingManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sECTIONSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sECTIONSBindingNavigator)).EndInit();
-            this.sECTIONSBindingNavigator.ResumeLayout(false);
-            this.sECTIONSBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sECTIONSDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pUBLISHING_HOUSESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pUBLISHING_HOUSESBindingNavigator)).EndInit();
+            this.pUBLISHING_HOUSESBindingNavigator.ResumeLayout(false);
+            this.pUBLISHING_HOUSESBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pUBLISHING_HOUSESDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,10 +257,10 @@
         #endregion
 
         private DataSet dataSet;
-        private System.Windows.Forms.BindingSource sECTIONSBindingSource;
-        private DataSetTableAdapters.SECTIONSTableAdapter sECTIONSTableAdapter;
+        private System.Windows.Forms.BindingSource pUBLISHING_HOUSESBindingSource;
+        private DataSetTableAdapters.PUBLISHING_HOUSESTableAdapter pUBLISHING_HOUSESTableAdapter;
         private DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator sECTIONSBindingNavigator;
+        private System.Windows.Forms.BindingNavigator pUBLISHING_HOUSESBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -271,8 +272,8 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton sECTIONSBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView sECTIONSDataGridView;
+        private System.Windows.Forms.ToolStripButton pUBLISHING_HOUSESBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView pUBLISHING_HOUSESDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }

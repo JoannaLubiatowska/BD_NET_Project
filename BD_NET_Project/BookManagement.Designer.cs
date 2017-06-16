@@ -29,23 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label tITLELabel;
-            System.Windows.Forms.Label iD_AUTHORLabel;
-            System.Windows.Forms.Label iD_PUBLISHING_HOUSELabel;
-            System.Windows.Forms.Label pUBLICATION_YEARLabel;
-            System.Windows.Forms.Label iD_SECTIONLabel;
-            System.Windows.Forms.Label bOOK_DESCRIPTIONLabel;
+            System.Windows.Forms.Label tytułLabel;
+            System.Windows.Forms.Label imię_autoraLabel;
+            System.Windows.Forms.Label nazwisko_autoraLabel;
+            System.Windows.Forms.Label wydawnictwoLabel;
+            System.Windows.Forms.Label działLabel;
+            System.Windows.Forms.Label iDLabel;
+            System.Windows.Forms.Label data_wydaniaLabel;
+            System.Windows.Forms.Label opisLabel;
             System.Windows.Forms.Label iSBNLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookManagement));
             this.dataSet = new BD_NET_Project.DataSet();
-            this.bOOKSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bOOKSTableAdapter = new BD_NET_Project.DataSetTableAdapters.BOOKSTableAdapter();
+            this.view_BookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.view_BookTableAdapter = new BD_NET_Project.DataSetTableAdapters.View_BookTableAdapter();
             this.tableAdapterManager = new BD_NET_Project.DataSetTableAdapters.TableAdapterManager();
-            this.bOOKSBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.view_BookBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
@@ -53,90 +52,113 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bOOKSBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.tITLETextBox = new System.Windows.Forms.TextBox();
-            this.iD_AUTHORTextBox = new System.Windows.Forms.TextBox();
-            this.iD_PUBLISHING_HOUSETextBox = new System.Windows.Forms.TextBox();
-            this.pUBLICATION_YEARTextBox = new System.Windows.Forms.TextBox();
-            this.iD_SECTIONTextBox = new System.Windows.Forms.TextBox();
-            this.bOOK_DESCRIPTIONTextBox = new System.Windows.Forms.TextBox();
-            this.cOVERPictureBox = new System.Windows.Forms.PictureBox();
+            this.tytułTextBox = new System.Windows.Forms.TextBox();
+            this.imię_autoraTextBox = new System.Windows.Forms.TextBox();
+            this.nazwisko_autoraTextBox = new System.Windows.Forms.TextBox();
+            this.wydawnictwoTextBox = new System.Windows.Forms.TextBox();
+            this.działTextBox = new System.Windows.Forms.TextBox();
+            this.iDTextBox = new System.Windows.Forms.TextBox();
+            this.data_wydaniaTextBox = new System.Windows.Forms.TextBox();
+            this.okładkaPictureBox = new System.Windows.Forms.PictureBox();
+            this.opisTextBox = new System.Windows.Forms.TextBox();
             this.iSBNTextBox = new System.Windows.Forms.TextBox();
-            tITLELabel = new System.Windows.Forms.Label();
-            iD_AUTHORLabel = new System.Windows.Forms.Label();
-            iD_PUBLISHING_HOUSELabel = new System.Windows.Forms.Label();
-            pUBLICATION_YEARLabel = new System.Windows.Forms.Label();
-            iD_SECTIONLabel = new System.Windows.Forms.Label();
-            bOOK_DESCRIPTIONLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            tytułLabel = new System.Windows.Forms.Label();
+            imię_autoraLabel = new System.Windows.Forms.Label();
+            nazwisko_autoraLabel = new System.Windows.Forms.Label();
+            wydawnictwoLabel = new System.Windows.Forms.Label();
+            działLabel = new System.Windows.Forms.Label();
+            iDLabel = new System.Windows.Forms.Label();
+            data_wydaniaLabel = new System.Windows.Forms.Label();
+            opisLabel = new System.Windows.Forms.Label();
             iSBNLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bOOKSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bOOKSBindingNavigator)).BeginInit();
-            this.bOOKSBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cOVERPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_BookBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_BookBindingNavigator)).BeginInit();
+            this.view_BookBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.okładkaPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // tITLELabel
+            // tytułLabel
             // 
-            tITLELabel.AutoSize = true;
-            tITLELabel.Location = new System.Drawing.Point(19, 107);
-            tITLELabel.Name = "tITLELabel";
-            tITLELabel.Size = new System.Drawing.Size(40, 13);
-            tITLELabel.TabIndex = 3;
-            tITLELabel.Text = "TITLE:";
+            tytułLabel.AutoSize = true;
+            tytułLabel.Location = new System.Drawing.Point(12, 116);
+            tytułLabel.Name = "tytułLabel";
+            tytułLabel.Size = new System.Drawing.Size(35, 13);
+            tytułLabel.TabIndex = 1;
+            tytułLabel.Text = "Tytuł:";
             // 
-            // iD_AUTHORLabel
+            // imię_autoraLabel
             // 
-            iD_AUTHORLabel.AutoSize = true;
-            iD_AUTHORLabel.Location = new System.Drawing.Point(19, 133);
-            iD_AUTHORLabel.Name = "iD_AUTHORLabel";
-            iD_AUTHORLabel.Size = new System.Drawing.Size(70, 13);
-            iD_AUTHORLabel.TabIndex = 5;
-            iD_AUTHORLabel.Text = "ID AUTHOR:";
+            imię_autoraLabel.AutoSize = true;
+            imię_autoraLabel.Location = new System.Drawing.Point(12, 142);
+            imię_autoraLabel.Name = "imię_autoraLabel";
+            imię_autoraLabel.Size = new System.Drawing.Size(62, 13);
+            imię_autoraLabel.TabIndex = 3;
+            imię_autoraLabel.Text = "Imię autora:";
             // 
-            // iD_PUBLISHING_HOUSELabel
+            // nazwisko_autoraLabel
             // 
-            iD_PUBLISHING_HOUSELabel.AutoSize = true;
-            iD_PUBLISHING_HOUSELabel.Location = new System.Drawing.Point(19, 159);
-            iD_PUBLISHING_HOUSELabel.Name = "iD_PUBLISHING_HOUSELabel";
-            iD_PUBLISHING_HOUSELabel.Size = new System.Drawing.Size(130, 13);
-            iD_PUBLISHING_HOUSELabel.TabIndex = 7;
-            iD_PUBLISHING_HOUSELabel.Text = "ID PUBLISHING HOUSE:";
+            nazwisko_autoraLabel.AutoSize = true;
+            nazwisko_autoraLabel.Location = new System.Drawing.Point(12, 168);
+            nazwisko_autoraLabel.Name = "nazwisko_autoraLabel";
+            nazwisko_autoraLabel.Size = new System.Drawing.Size(89, 13);
+            nazwisko_autoraLabel.TabIndex = 5;
+            nazwisko_autoraLabel.Text = "Nazwisko autora:";
             // 
-            // pUBLICATION_YEARLabel
+            // wydawnictwoLabel
             // 
-            pUBLICATION_YEARLabel.AutoSize = true;
-            pUBLICATION_YEARLabel.Location = new System.Drawing.Point(19, 185);
-            pUBLICATION_YEARLabel.Name = "pUBLICATION_YEARLabel";
-            pUBLICATION_YEARLabel.Size = new System.Drawing.Size(113, 13);
-            pUBLICATION_YEARLabel.TabIndex = 9;
-            pUBLICATION_YEARLabel.Text = "PUBLICATION YEAR:";
+            wydawnictwoLabel.AutoSize = true;
+            wydawnictwoLabel.Location = new System.Drawing.Point(12, 194);
+            wydawnictwoLabel.Name = "wydawnictwoLabel";
+            wydawnictwoLabel.Size = new System.Drawing.Size(77, 13);
+            wydawnictwoLabel.TabIndex = 7;
+            wydawnictwoLabel.Text = "Wydawnictwo:";
             // 
-            // iD_SECTIONLabel
+            // działLabel
             // 
-            iD_SECTIONLabel.AutoSize = true;
-            iD_SECTIONLabel.Location = new System.Drawing.Point(19, 211);
-            iD_SECTIONLabel.Name = "iD_SECTIONLabel";
-            iD_SECTIONLabel.Size = new System.Drawing.Size(71, 13);
-            iD_SECTIONLabel.TabIndex = 11;
-            iD_SECTIONLabel.Text = "ID SECTION:";
+            działLabel.AutoSize = true;
+            działLabel.Location = new System.Drawing.Point(12, 220);
+            działLabel.Name = "działLabel";
+            działLabel.Size = new System.Drawing.Size(35, 13);
+            działLabel.TabIndex = 9;
+            działLabel.Text = "Dział:";
             // 
-            // bOOK_DESCRIPTIONLabel
+            // iDLabel
             // 
-            bOOK_DESCRIPTIONLabel.AutoSize = true;
-            bOOK_DESCRIPTIONLabel.Location = new System.Drawing.Point(19, 237);
-            bOOK_DESCRIPTIONLabel.Name = "bOOK_DESCRIPTIONLabel";
-            bOOK_DESCRIPTIONLabel.Size = new System.Drawing.Size(116, 13);
-            bOOK_DESCRIPTIONLabel.TabIndex = 13;
-            bOOK_DESCRIPTIONLabel.Text = "BOOK DESCRIPTION:";
+            iDLabel.AutoSize = true;
+            iDLabel.Location = new System.Drawing.Point(12, 86);
+            iDLabel.Name = "iDLabel";
+            iDLabel.Size = new System.Drawing.Size(21, 13);
+            iDLabel.TabIndex = 11;
+            iDLabel.Text = "ID:";
+            // 
+            // data_wydaniaLabel
+            // 
+            data_wydaniaLabel.AutoSize = true;
+            data_wydaniaLabel.Location = new System.Drawing.Point(12, 246);
+            data_wydaniaLabel.Name = "data_wydaniaLabel";
+            data_wydaniaLabel.Size = new System.Drawing.Size(75, 13);
+            data_wydaniaLabel.TabIndex = 13;
+            data_wydaniaLabel.Text = "Data wydania:";
+            // 
+            // opisLabel
+            // 
+            opisLabel.AutoSize = true;
+            opisLabel.Location = new System.Drawing.Point(12, 298);
+            opisLabel.Name = "opisLabel";
+            opisLabel.Size = new System.Drawing.Size(31, 13);
+            opisLabel.TabIndex = 17;
+            opisLabel.Text = "Opis:";
             // 
             // iSBNLabel
             // 
             iSBNLabel.AutoSize = true;
-            iSBNLabel.Location = new System.Drawing.Point(19, 263);
+            iSBNLabel.Location = new System.Drawing.Point(12, 272);
             iSBNLabel.Name = "iSBNLabel";
             iSBNLabel.Size = new System.Drawing.Size(35, 13);
-            iSBNLabel.TabIndex = 17;
+            iSBNLabel.TabIndex = 19;
             iSBNLabel.Text = "ISBN:";
             // 
             // dataSet
@@ -144,33 +166,34 @@
             this.dataSet.DataSetName = "DataSet";
             this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // bOOKSBindingSource
+            // view_BookBindingSource
             // 
-            this.bOOKSBindingSource.DataMember = "BOOKS";
-            this.bOOKSBindingSource.DataSource = this.dataSet;
+            this.view_BookBindingSource.DataMember = "View_Book";
+            this.view_BookBindingSource.DataSource = this.dataSet;
             // 
-            // bOOKSTableAdapter
+            // view_BookTableAdapter
             // 
-            this.bOOKSTableAdapter.ClearBeforeFill = true;
+            this.view_BookTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.AUTHORSTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BOOKSTableAdapter = this.bOOKSTableAdapter;
+            this.tableAdapterManager.BOOKSTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.LIB_TRANSACTIONTableAdapter = null;
             this.tableAdapterManager.PUBLISHING_HOUSESTableAdapter = null;
             this.tableAdapterManager.SECTIONSTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = BD_NET_Project.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.USERSTableAdapter = null;
             // 
-            // bOOKSBindingNavigator
+            // view_BookBindingNavigator
             // 
-            this.bOOKSBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bOOKSBindingNavigator.BindingSource = this.bOOKSBindingSource;
-            this.bOOKSBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.bOOKSBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bOOKSBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.view_BookBindingNavigator.AddNewItem = null;
+            this.view_BookBindingNavigator.BindingSource = this.view_BookBindingSource;
+            this.view_BookBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.view_BookBindingNavigator.DeleteItem = null;
+            this.view_BookBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -179,29 +202,17 @@
             this.bindingNavigatorSeparator1,
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.bOOKSBindingNavigatorSaveItem});
-            this.bOOKSBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.bOOKSBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bOOKSBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bOOKSBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bOOKSBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bOOKSBindingNavigator.Name = "bOOKSBindingNavigator";
-            this.bOOKSBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.bOOKSBindingNavigator.Size = new System.Drawing.Size(534, 25);
-            this.bOOKSBindingNavigator.TabIndex = 0;
-            this.bOOKSBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.bindingNavigatorSeparator2});
+            this.view_BookBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.view_BookBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.view_BookBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.view_BookBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.view_BookBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.view_BookBindingNavigator.Name = "view_BookBindingNavigator";
+            this.view_BookBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.view_BookBindingNavigator.Size = new System.Drawing.Size(563, 25);
+            this.view_BookBindingNavigator.TabIndex = 0;
+            this.view_BookBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
@@ -209,24 +220,6 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
             // 
@@ -279,111 +272,143 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // bOOKSBindingNavigatorSaveItem
+            // tytułTextBox
             // 
-            this.bOOKSBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bOOKSBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("bOOKSBindingNavigatorSaveItem.Image")));
-            this.bOOKSBindingNavigatorSaveItem.Name = "bOOKSBindingNavigatorSaveItem";
-            this.bOOKSBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.bOOKSBindingNavigatorSaveItem.Text = "Save Data";
-            this.bOOKSBindingNavigatorSaveItem.Click += new System.EventHandler(this.bOOKSBindingNavigatorSaveItem_Click);
+            this.tytułTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "Tytuł", true));
+            this.tytułTextBox.Location = new System.Drawing.Point(107, 113);
+            this.tytułTextBox.Name = "tytułTextBox";
+            this.tytułTextBox.Size = new System.Drawing.Size(199, 20);
+            this.tytułTextBox.TabIndex = 2;
             // 
-            // tITLETextBox
+            // imię_autoraTextBox
             // 
-            this.tITLETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOOKSBindingSource, "TITLE", true));
-            this.tITLETextBox.Location = new System.Drawing.Point(155, 104);
-            this.tITLETextBox.Name = "tITLETextBox";
-            this.tITLETextBox.Size = new System.Drawing.Size(100, 20);
-            this.tITLETextBox.TabIndex = 4;
+            this.imię_autoraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "Imię autora]", true));
+            this.imię_autoraTextBox.Location = new System.Drawing.Point(107, 139);
+            this.imię_autoraTextBox.Name = "imię_autoraTextBox";
+            this.imię_autoraTextBox.Size = new System.Drawing.Size(199, 20);
+            this.imię_autoraTextBox.TabIndex = 4;
             // 
-            // iD_AUTHORTextBox
+            // nazwisko_autoraTextBox
             // 
-            this.iD_AUTHORTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOOKSBindingSource, "ID_AUTHOR", true));
-            this.iD_AUTHORTextBox.Location = new System.Drawing.Point(155, 130);
-            this.iD_AUTHORTextBox.Name = "iD_AUTHORTextBox";
-            this.iD_AUTHORTextBox.Size = new System.Drawing.Size(100, 20);
-            this.iD_AUTHORTextBox.TabIndex = 6;
+            this.nazwisko_autoraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "Nazwisko autora", true));
+            this.nazwisko_autoraTextBox.Location = new System.Drawing.Point(107, 165);
+            this.nazwisko_autoraTextBox.Name = "nazwisko_autoraTextBox";
+            this.nazwisko_autoraTextBox.Size = new System.Drawing.Size(199, 20);
+            this.nazwisko_autoraTextBox.TabIndex = 6;
             // 
-            // iD_PUBLISHING_HOUSETextBox
+            // wydawnictwoTextBox
             // 
-            this.iD_PUBLISHING_HOUSETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOOKSBindingSource, "ID_PUBLISHING_HOUSE", true));
-            this.iD_PUBLISHING_HOUSETextBox.Location = new System.Drawing.Point(155, 156);
-            this.iD_PUBLISHING_HOUSETextBox.Name = "iD_PUBLISHING_HOUSETextBox";
-            this.iD_PUBLISHING_HOUSETextBox.Size = new System.Drawing.Size(100, 20);
-            this.iD_PUBLISHING_HOUSETextBox.TabIndex = 8;
+            this.wydawnictwoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "Wydawnictwo", true));
+            this.wydawnictwoTextBox.Location = new System.Drawing.Point(107, 191);
+            this.wydawnictwoTextBox.Name = "wydawnictwoTextBox";
+            this.wydawnictwoTextBox.Size = new System.Drawing.Size(199, 20);
+            this.wydawnictwoTextBox.TabIndex = 8;
             // 
-            // pUBLICATION_YEARTextBox
+            // działTextBox
             // 
-            this.pUBLICATION_YEARTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOOKSBindingSource, "PUBLICATION_YEAR", true));
-            this.pUBLICATION_YEARTextBox.Location = new System.Drawing.Point(155, 182);
-            this.pUBLICATION_YEARTextBox.Name = "pUBLICATION_YEARTextBox";
-            this.pUBLICATION_YEARTextBox.Size = new System.Drawing.Size(100, 20);
-            this.pUBLICATION_YEARTextBox.TabIndex = 10;
+            this.działTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "Dział", true));
+            this.działTextBox.Location = new System.Drawing.Point(107, 217);
+            this.działTextBox.Name = "działTextBox";
+            this.działTextBox.Size = new System.Drawing.Size(199, 20);
+            this.działTextBox.TabIndex = 10;
             // 
-            // iD_SECTIONTextBox
+            // iDTextBox
             // 
-            this.iD_SECTIONTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOOKSBindingSource, "ID_SECTION", true));
-            this.iD_SECTIONTextBox.Location = new System.Drawing.Point(155, 208);
-            this.iD_SECTIONTextBox.Name = "iD_SECTIONTextBox";
-            this.iD_SECTIONTextBox.Size = new System.Drawing.Size(100, 20);
-            this.iD_SECTIONTextBox.TabIndex = 12;
+            this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "ID", true));
+            this.iDTextBox.Location = new System.Drawing.Point(107, 83);
+            this.iDTextBox.Name = "iDTextBox";
+            this.iDTextBox.Size = new System.Drawing.Size(199, 20);
+            this.iDTextBox.TabIndex = 12;
             // 
-            // bOOK_DESCRIPTIONTextBox
+            // data_wydaniaTextBox
             // 
-            this.bOOK_DESCRIPTIONTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOOKSBindingSource, "BOOK_DESCRIPTION", true));
-            this.bOOK_DESCRIPTIONTextBox.Location = new System.Drawing.Point(155, 234);
-            this.bOOK_DESCRIPTIONTextBox.Name = "bOOK_DESCRIPTIONTextBox";
-            this.bOOK_DESCRIPTIONTextBox.Size = new System.Drawing.Size(100, 20);
-            this.bOOK_DESCRIPTIONTextBox.TabIndex = 14;
+            this.data_wydaniaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "Data wydania", true));
+            this.data_wydaniaTextBox.Location = new System.Drawing.Point(107, 243);
+            this.data_wydaniaTextBox.Name = "data_wydaniaTextBox";
+            this.data_wydaniaTextBox.Size = new System.Drawing.Size(199, 20);
+            this.data_wydaniaTextBox.TabIndex = 14;
             // 
-            // cOVERPictureBox
+            // okładkaPictureBox
             // 
-            this.cOVERPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.bOOKSBindingSource, "COVER", true));
-            this.cOVERPictureBox.Location = new System.Drawing.Point(270, 59);
-            this.cOVERPictureBox.Name = "cOVERPictureBox";
-            this.cOVERPictureBox.Size = new System.Drawing.Size(235, 297);
-            this.cOVERPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cOVERPictureBox.TabIndex = 16;
-            this.cOVERPictureBox.TabStop = false;
+            this.okładkaPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.view_BookBindingSource, "Okładka", true));
+            this.okładkaPictureBox.Location = new System.Drawing.Point(324, 28);
+            this.okładkaPictureBox.Name = "okładkaPictureBox";
+            this.okładkaPictureBox.Size = new System.Drawing.Size(227, 329);
+            this.okładkaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.okładkaPictureBox.TabIndex = 16;
+            this.okładkaPictureBox.TabStop = false;
+            // 
+            // opisTextBox
+            // 
+            this.opisTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "Opis", true));
+            this.opisTextBox.Location = new System.Drawing.Point(107, 295);
+            this.opisTextBox.Multiline = true;
+            this.opisTextBox.Name = "opisTextBox";
+            this.opisTextBox.Size = new System.Drawing.Size(199, 52);
+            this.opisTextBox.TabIndex = 18;
             // 
             // iSBNTextBox
             // 
-            this.iSBNTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOOKSBindingSource, "ISBN", true));
-            this.iSBNTextBox.Location = new System.Drawing.Point(155, 260);
+            this.iSBNTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "ISBN", true));
+            this.iSBNTextBox.Location = new System.Drawing.Point(107, 269);
             this.iSBNTextBox.Name = "iSBNTextBox";
-            this.iSBNTextBox.Size = new System.Drawing.Size(100, 20);
-            this.iSBNTextBox.TabIndex = 18;
+            this.iSBNTextBox.Size = new System.Drawing.Size(199, 20);
+            this.iSBNTextBox.TabIndex = 20;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(107, 363);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(199, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Dodaj/Edytuj/Usuń";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // BookManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 411);
-            this.Controls.Add(tITLELabel);
-            this.Controls.Add(this.tITLETextBox);
-            this.Controls.Add(iD_AUTHORLabel);
-            this.Controls.Add(this.iD_AUTHORTextBox);
-            this.Controls.Add(iD_PUBLISHING_HOUSELabel);
-            this.Controls.Add(this.iD_PUBLISHING_HOUSETextBox);
-            this.Controls.Add(pUBLICATION_YEARLabel);
-            this.Controls.Add(this.pUBLICATION_YEARTextBox);
-            this.Controls.Add(iD_SECTIONLabel);
-            this.Controls.Add(this.iD_SECTIONTextBox);
-            this.Controls.Add(bOOK_DESCRIPTIONLabel);
-            this.Controls.Add(this.bOOK_DESCRIPTIONTextBox);
-            this.Controls.Add(this.cOVERPictureBox);
+            this.ClientSize = new System.Drawing.Size(563, 407);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(tytułLabel);
+            this.Controls.Add(this.tytułTextBox);
+            this.Controls.Add(imię_autoraLabel);
+            this.Controls.Add(this.imię_autoraTextBox);
+            this.Controls.Add(nazwisko_autoraLabel);
+            this.Controls.Add(this.nazwisko_autoraTextBox);
+            this.Controls.Add(wydawnictwoLabel);
+            this.Controls.Add(this.wydawnictwoTextBox);
+            this.Controls.Add(działLabel);
+            this.Controls.Add(this.działTextBox);
+            this.Controls.Add(iDLabel);
+            this.Controls.Add(this.iDTextBox);
+            this.Controls.Add(data_wydaniaLabel);
+            this.Controls.Add(this.data_wydaniaTextBox);
+            this.Controls.Add(this.okładkaPictureBox);
+            this.Controls.Add(opisLabel);
+            this.Controls.Add(this.opisTextBox);
             this.Controls.Add(iSBNLabel);
             this.Controls.Add(this.iSBNTextBox);
-            this.Controls.Add(this.bOOKSBindingNavigator);
+            this.Controls.Add(this.view_BookBindingNavigator);
             this.Name = "BookManagement";
             this.Text = "BookManagement";
             this.Load += new System.EventHandler(this.BookManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bOOKSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bOOKSBindingNavigator)).EndInit();
-            this.bOOKSBindingNavigator.ResumeLayout(false);
-            this.bOOKSBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cOVERPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_BookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_BookBindingNavigator)).EndInit();
+            this.view_BookBindingNavigator.ResumeLayout(false);
+            this.view_BookBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.okładkaPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,14 +417,11 @@
         #endregion
 
         private DataSet dataSet;
-        private System.Windows.Forms.BindingSource bOOKSBindingSource;
-        private DataSetTableAdapters.BOOKSTableAdapter bOOKSTableAdapter;
+        private System.Windows.Forms.BindingSource view_BookBindingSource;
+        private DataSetTableAdapters.View_BookTableAdapter view_BookTableAdapter;
         private DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator bOOKSBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.BindingNavigator view_BookBindingNavigator;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
         private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
@@ -407,14 +429,17 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton bOOKSBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox tITLETextBox;
-        private System.Windows.Forms.TextBox iD_AUTHORTextBox;
-        private System.Windows.Forms.TextBox iD_PUBLISHING_HOUSETextBox;
-        private System.Windows.Forms.TextBox pUBLICATION_YEARTextBox;
-        private System.Windows.Forms.TextBox iD_SECTIONTextBox;
-        private System.Windows.Forms.TextBox bOOK_DESCRIPTIONTextBox;
-        private System.Windows.Forms.PictureBox cOVERPictureBox;
+        private System.Windows.Forms.TextBox tytułTextBox;
+        private System.Windows.Forms.TextBox imię_autoraTextBox;
+        private System.Windows.Forms.TextBox nazwisko_autoraTextBox;
+        private System.Windows.Forms.TextBox wydawnictwoTextBox;
+        private System.Windows.Forms.TextBox działTextBox;
+        private System.Windows.Forms.TextBox iDTextBox;
+        private System.Windows.Forms.TextBox data_wydaniaTextBox;
+        private System.Windows.Forms.PictureBox okładkaPictureBox;
+        private System.Windows.Forms.TextBox opisTextBox;
         private System.Windows.Forms.TextBox iSBNTextBox;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.Button button1;
     }
 }
