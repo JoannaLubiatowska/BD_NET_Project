@@ -2,9 +2,11 @@
 {
 }
 
-namespace BD_NET_Project {
-    
-    
-    public partial class DataSet {
+namespace BD_NET_Project
+{
+
+
+    public partial class DataSet
+    {
     }
 }

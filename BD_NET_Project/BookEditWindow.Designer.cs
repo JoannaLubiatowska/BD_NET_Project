@@ -34,9 +34,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 445);
+            this.ClientSize = new System.Drawing.Size(657, 445);
             this.Name = "BookEditWindow";
-            this.Text = "BookEditWindow";
+            this.Text = "Edycja książek";
             this.ResumeLayout(false);
 
         }

@@ -240,7 +240,7 @@
             this.Controls.Add(this.sECTIONSDataGridView);
             this.Controls.Add(this.sECTIONSBindingNavigator);
             this.Name = "SectionManagement";
-            this.Text = "SectionManagement";
+            this.Text = "Działy";
             this.Load += new System.EventHandler(this.SectionManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sECTIONSBindingSource)).EndInit();

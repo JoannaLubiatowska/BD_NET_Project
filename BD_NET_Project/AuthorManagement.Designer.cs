@@ -248,7 +248,7 @@
             this.Controls.Add(this.aUTHORSDataGridView);
             this.Controls.Add(this.aUTHORSBindingNavigator);
             this.Name = "AuthorManagement";
-            this.Text = "AuthorManagement";
+            this.Text = "Autorzy";
             this.Load += new System.EventHandler(this.AuthorManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTHORSBindingSource)).EndInit();

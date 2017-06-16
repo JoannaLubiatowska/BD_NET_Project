@@ -98,6 +98,12 @@
     <Compile Include="SectionManagement.Designer.cs">
       <DependentUpon>SectionManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Statistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistic.Designer.cs">
+      <DependentUpon>Statistic.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransactionManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SectionManagement.resx">
       <DependentUpon>SectionManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic.resx">
+      <DependentUpon>Statistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionManagement.resx">
+      <DependentUpon>TransactionManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManagement.resx">
       <DependentUpon>UserManagement.cs</DependentUpon>

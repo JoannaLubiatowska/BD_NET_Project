@@ -17,8 +17,6 @@ namespace BD_NET_Project
         public MainAdminWindow()
         {
             InitializeComponent();
-            connection = new SqlConnection("Data Source=ASIA-HP;Initial Catalog=LIBRARY;Persist Security Info=True;User ID=AdminNET;Password=12345");
-
         }
 
         private void buttonBook_Click(object sender, EventArgs e)
@@ -75,14 +73,13 @@ namespace BD_NET_Project
             }  
         }
 
-        private void buttonUserStatistic_Click(object sender, EventArgs e)
+        private void buttonStatistic_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void buttonTransactionStatistic_Click(object sender, EventArgs e)
-        {
-
+            if (openNextWindow("Statistic"))
+            {
+                Statistic b = new Statistic();
+                b.Show();
+            }
         }
 
         private Boolean openNextWindow(string windowName)

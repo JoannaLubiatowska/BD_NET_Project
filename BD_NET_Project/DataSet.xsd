@@ -405,6 +405,27 @@ SELECT ID_SECTION, SECTION_NAME FROM SECTIONS WHERE (ID_SECTION = @ID_SECTION)</
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TranTableAdapter" GeneratorDataComponentClassName="View_TranTableAdapter" Name="View_Tran" UserDataComponentName="View_TranTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LIBRARYConnectionString (Settings)" DbObjectName="LIBRARY.dbo.View_Tran" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TITLE, ID_LIB_TRANSACTION, TRANSACTION_DATE, RETURN_DATE, FIRST_NAME, LAST_NAME FROM dbo.View_Tran</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TITLE" DataSetColumn="TITLE" />
+              <Mapping SourceColumn="ID_LIB_TRANSACTION" DataSetColumn="ID_LIB_TRANSACTION" />
+              <Mapping SourceColumn="TRANSACTION_DATE" DataSetColumn="TRANSACTION_DATE" />
+              <Mapping SourceColumn="RETURN_DATE" DataSetColumn="RETURN_DATE" />
+              <Mapping SourceColumn="FIRST_NAME" DataSetColumn="FIRST_NAME" />
+              <Mapping SourceColumn="LAST_NAME" DataSetColumn="LAST_NAME" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -413,7 +434,7 @@ SELECT ID_SECTION, SECTION_NAME FROM SECTIONS WHERE (ID_SECTION = @ID_SECTION)</
   <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="AUTHORS" msprop:Generator_TableClassName="AUTHORSDataTable" msprop:Generator_TableVarName="tableAUTHORS" msprop:Generator_TablePropName="AUTHORS" msprop:Generator_RowDeletingName="AUTHORSRowDeleting" msprop:Generator_RowChangingName="AUTHORSRowChanging" msprop:Generator_RowEvHandlerName="AUTHORSRowChangeEventHandler" msprop:Generator_RowDeletedName="AUTHORSRowDeleted" msprop:Generator_UserTableName="AUTHORS" msprop:Generator_RowChangedName="AUTHORSRowChanged" msprop:Generator_RowEvArgName="AUTHORSRowChangeEvent" msprop:Generator_RowClassName="AUTHORSRow">
+        <xs:element name="AUTHORS" msprop:Generator_TableClassName="AUTHORSDataTable" msprop:Generator_TableVarName="tableAUTHORS" msprop:Generator_RowChangedName="AUTHORSRowChanged" msprop:Generator_TablePropName="AUTHORS" msprop:Generator_RowDeletingName="AUTHORSRowDeleting" msprop:Generator_RowChangingName="AUTHORSRowChanging" msprop:Generator_RowEvHandlerName="AUTHORSRowChangeEventHandler" msprop:Generator_RowDeletedName="AUTHORSRowDeleted" msprop:Generator_RowClassName="AUTHORSRow" msprop:Generator_UserTableName="AUTHORS" msprop:Generator_RowEvArgName="AUTHORSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_AUTHOR" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_AUTHOR" msprop:Generator_ColumnPropNameInRow="ID_AUTHOR" msprop:Generator_ColumnPropNameInTable="ID_AUTHORColumn" msprop:Generator_UserColumnName="ID_AUTHOR" type="xs:int" />
@@ -434,7 +455,7 @@ SELECT ID_SECTION, SECTION_NAME FROM SECTIONS WHERE (ID_SECTION = @ID_SECTION)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="USERS" msprop:Generator_TableClassName="USERSDataTable" msprop:Generator_TableVarName="tableUSERS" msprop:Generator_TablePropName="USERS" msprop:Generator_RowDeletingName="USERSRowDeleting" msprop:Generator_RowChangingName="USERSRowChanging" msprop:Generator_RowEvHandlerName="USERSRowChangeEventHandler" msprop:Generator_RowDeletedName="USERSRowDeleted" msprop:Generator_UserTableName="USERS" msprop:Generator_RowChangedName="USERSRowChanged" msprop:Generator_RowEvArgName="USERSRowChangeEvent" msprop:Generator_RowClassName="USERSRow">
+        <xs:element name="USERS" msprop:Generator_TableClassName="USERSDataTable" msprop:Generator_TableVarName="tableUSERS" msprop:Generator_RowChangedName="USERSRowChanged" msprop:Generator_TablePropName="USERS" msprop:Generator_RowDeletingName="USERSRowDeleting" msprop:Generator_RowChangingName="USERSRowChanging" msprop:Generator_RowEvHandlerName="USERSRowChangeEventHandler" msprop:Generator_RowDeletedName="USERSRowDeleted" msprop:Generator_RowClassName="USERSRow" msprop:Generator_UserTableName="USERS" msprop:Generator_RowEvArgName="USERSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_USER" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_USER" msprop:Generator_ColumnPropNameInRow="ID_USER" msprop:Generator_ColumnPropNameInTable="ID_USERColumn" msprop:Generator_UserColumnName="ID_USER" type="xs:int" />
@@ -484,7 +505,7 @@ SELECT ID_SECTION, SECTION_NAME FROM SECTIONS WHERE (ID_SECTION = @ID_SECTION)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="BOOKS" msprop:Generator_TableClassName="BOOKSDataTable" msprop:Generator_TableVarName="tableBOOKS" msprop:Generator_TablePropName="BOOKS" msprop:Generator_RowDeletingName="BOOKSRowDeleting" msprop:Generator_RowChangingName="BOOKSRowChanging" msprop:Generator_RowEvHandlerName="BOOKSRowChangeEventHandler" msprop:Generator_RowDeletedName="BOOKSRowDeleted" msprop:Generator_UserTableName="BOOKS" msprop:Generator_RowChangedName="BOOKSRowChanged" msprop:Generator_RowEvArgName="BOOKSRowChangeEvent" msprop:Generator_RowClassName="BOOKSRow">
+        <xs:element name="BOOKS" msprop:Generator_TableClassName="BOOKSDataTable" msprop:Generator_TableVarName="tableBOOKS" msprop:Generator_RowChangedName="BOOKSRowChanged" msprop:Generator_TablePropName="BOOKS" msprop:Generator_RowDeletingName="BOOKSRowDeleting" msprop:Generator_RowChangingName="BOOKSRowChanging" msprop:Generator_RowEvHandlerName="BOOKSRowChangeEventHandler" msprop:Generator_RowDeletedName="BOOKSRowDeleted" msprop:Generator_RowClassName="BOOKSRow" msprop:Generator_UserTableName="BOOKS" msprop:Generator_RowEvArgName="BOOKSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_BOOK" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_BOOK" msprop:Generator_ColumnPropNameInRow="ID_BOOK" msprop:Generator_ColumnPropNameInTable="ID_BOOKColumn" msprop:Generator_UserColumnName="ID_BOOK" type="xs:int" />
@@ -517,7 +538,7 @@ SELECT ID_SECTION, SECTION_NAME FROM SECTIONS WHERE (ID_SECTION = @ID_SECTION)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LIB_TRANSACTION" msprop:Generator_TableClassName="LIB_TRANSACTIONDataTable" msprop:Generator_TableVarName="tableLIB_TRANSACTION" msprop:Generator_TablePropName="LIB_TRANSACTION" msprop:Generator_RowDeletingName="LIB_TRANSACTIONRowDeleting" msprop:Generator_RowChangingName="LIB_TRANSACTIONRowChanging" msprop:Generator_RowEvHandlerName="LIB_TRANSACTIONRowChangeEventHandler" msprop:Generator_RowDeletedName="LIB_TRANSACTIONRowDeleted" msprop:Generator_UserTableName="LIB_TRANSACTION" msprop:Generator_RowChangedName="LIB_TRANSACTIONRowChanged" msprop:Generator_RowEvArgName="LIB_TRANSACTIONRowChangeEvent" msprop:Generator_RowClassName="LIB_TRANSACTIONRow">
+        <xs:element name="LIB_TRANSACTION" msprop:Generator_TableClassName="LIB_TRANSACTIONDataTable" msprop:Generator_TableVarName="tableLIB_TRANSACTION" msprop:Generator_RowChangedName="LIB_TRANSACTIONRowChanged" msprop:Generator_TablePropName="LIB_TRANSACTION" msprop:Generator_RowDeletingName="LIB_TRANSACTIONRowDeleting" msprop:Generator_RowChangingName="LIB_TRANSACTIONRowChanging" msprop:Generator_RowEvHandlerName="LIB_TRANSACTIONRowChangeEventHandler" msprop:Generator_RowDeletedName="LIB_TRANSACTIONRowDeleted" msprop:Generator_RowClassName="LIB_TRANSACTIONRow" msprop:Generator_UserTableName="LIB_TRANSACTION" msprop:Generator_RowEvArgName="LIB_TRANSACTIONRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_LIB_TRANSACTION" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_LIB_TRANSACTION" msprop:Generator_ColumnPropNameInRow="ID_LIB_TRANSACTION" msprop:Generator_ColumnPropNameInTable="ID_LIB_TRANSACTIONColumn" msprop:Generator_UserColumnName="ID_LIB_TRANSACTION" type="xs:int" />
@@ -528,7 +549,7 @@ SELECT ID_SECTION, SECTION_NAME FROM SECTIONS WHERE (ID_SECTION = @ID_SECTION)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PUBLISHING_HOUSES" msprop:Generator_TableClassName="PUBLISHING_HOUSESDataTable" msprop:Generator_TableVarName="tablePUBLISHING_HOUSES" msprop:Generator_TablePropName="PUBLISHING_HOUSES" msprop:Generator_RowDeletingName="PUBLISHING_HOUSESRowDeleting" msprop:Generator_RowChangingName="PUBLISHING_HOUSESRowChanging" msprop:Generator_RowEvHandlerName="PUBLISHING_HOUSESRowChangeEventHandler" msprop:Generator_RowDeletedName="PUBLISHING_HOUSESRowDeleted" msprop:Generator_UserTableName="PUBLISHING_HOUSES" msprop:Generator_RowChangedName="PUBLISHING_HOUSESRowChanged" msprop:Generator_RowEvArgName="PUBLISHING_HOUSESRowChangeEvent" msprop:Generator_RowClassName="PUBLISHING_HOUSESRow">
+        <xs:element name="PUBLISHING_HOUSES" msprop:Generator_TableClassName="PUBLISHING_HOUSESDataTable" msprop:Generator_TableVarName="tablePUBLISHING_HOUSES" msprop:Generator_RowChangedName="PUBLISHING_HOUSESRowChanged" msprop:Generator_TablePropName="PUBLISHING_HOUSES" msprop:Generator_RowDeletingName="PUBLISHING_HOUSESRowDeleting" msprop:Generator_RowChangingName="PUBLISHING_HOUSESRowChanging" msprop:Generator_RowEvHandlerName="PUBLISHING_HOUSESRowChangeEventHandler" msprop:Generator_RowDeletedName="PUBLISHING_HOUSESRowDeleted" msprop:Generator_RowClassName="PUBLISHING_HOUSESRow" msprop:Generator_UserTableName="PUBLISHING_HOUSES" msprop:Generator_RowEvArgName="PUBLISHING_HOUSESRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_PUBLISHING_HOUSE" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_PUBLISHING_HOUSE" msprop:Generator_ColumnPropNameInRow="ID_PUBLISHING_HOUSE" msprop:Generator_ColumnPropNameInTable="ID_PUBLISHING_HOUSEColumn" msprop:Generator_UserColumnName="ID_PUBLISHING_HOUSE" type="xs:int" />
@@ -542,7 +563,7 @@ SELECT ID_SECTION, SECTION_NAME FROM SECTIONS WHERE (ID_SECTION = @ID_SECTION)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SECTIONS" msprop:Generator_TableClassName="SECTIONSDataTable" msprop:Generator_TableVarName="tableSECTIONS" msprop:Generator_TablePropName="SECTIONS" msprop:Generator_RowDeletingName="SECTIONSRowDeleting" msprop:Generator_RowChangingName="SECTIONSRowChanging" msprop:Generator_RowEvHandlerName="SECTIONSRowChangeEventHandler" msprop:Generator_RowDeletedName="SECTIONSRowDeleted" msprop:Generator_UserTableName="SECTIONS" msprop:Generator_RowChangedName="SECTIONSRowChanged" msprop:Generator_RowEvArgName="SECTIONSRowChangeEvent" msprop:Generator_RowClassName="SECTIONSRow">
+        <xs:element name="SECTIONS" msprop:Generator_TableClassName="SECTIONSDataTable" msprop:Generator_TableVarName="tableSECTIONS" msprop:Generator_RowChangedName="SECTIONSRowChanged" msprop:Generator_TablePropName="SECTIONS" msprop:Generator_RowDeletingName="SECTIONSRowDeleting" msprop:Generator_RowChangingName="SECTIONSRowChanging" msprop:Generator_RowEvHandlerName="SECTIONSRowChangeEventHandler" msprop:Generator_RowDeletedName="SECTIONSRowDeleted" msprop:Generator_RowClassName="SECTIONSRow" msprop:Generator_UserTableName="SECTIONS" msprop:Generator_RowEvArgName="SECTIONSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_SECTION" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_SECTION" msprop:Generator_ColumnPropNameInRow="ID_SECTION" msprop:Generator_ColumnPropNameInTable="ID_SECTIONColumn" msprop:Generator_UserColumnName="ID_SECTION" type="xs:int" />
@@ -556,7 +577,7 @@ SELECT ID_SECTION, SECTION_NAME FROM SECTIONS WHERE (ID_SECTION = @ID_SECTION)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="View_Book" msprop:Generator_TableClassName="View_BookDataTable" msprop:Generator_TableVarName="tableView_Book" msprop:Generator_TablePropName="View_Book" msprop:Generator_RowDeletingName="View_BookRowDeleting" msprop:Generator_RowChangingName="View_BookRowChanging" msprop:Generator_RowEvHandlerName="View_BookRowChangeEventHandler" msprop:Generator_RowDeletedName="View_BookRowDeleted" msprop:Generator_UserTableName="View_Book" msprop:Generator_RowChangedName="View_BookRowChanged" msprop:Generator_RowEvArgName="View_BookRowChangeEvent" msprop:Generator_RowClassName="View_BookRow">
+        <xs:element name="View_Book" msprop:Generator_TableClassName="View_BookDataTable" msprop:Generator_TableVarName="tableView_Book" msprop:Generator_RowChangedName="View_BookRowChanged" msprop:Generator_TablePropName="View_Book" msprop:Generator_RowDeletingName="View_BookRowDeleting" msprop:Generator_RowChangingName="View_BookRowChanging" msprop:Generator_RowEvHandlerName="View_BookRowChangeEventHandler" msprop:Generator_RowDeletedName="View_BookRowDeleted" msprop:Generator_RowClassName="View_BookRow" msprop:Generator_UserTableName="View_Book" msprop:Generator_RowEvArgName="View_BookRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Tytuł" msprop:Generator_ColumnVarNameInTable="columnTytuł" msprop:Generator_ColumnPropNameInRow="Tytuł" msprop:Generator_ColumnPropNameInTable="TytułColumn" msprop:Generator_UserColumnName="Tytuł">
@@ -614,6 +635,36 @@ SELECT ID_SECTION, SECTION_NAME FROM SECTIONS WHERE (ID_SECTION = @ID_SECTION)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="View_Tran" msprop:Generator_TableClassName="View_TranDataTable" msprop:Generator_TableVarName="tableView_Tran" msprop:Generator_TablePropName="View_Tran" msprop:Generator_RowDeletingName="View_TranRowDeleting" msprop:Generator_RowChangingName="View_TranRowChanging" msprop:Generator_RowEvHandlerName="View_TranRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TranRowDeleted" msprop:Generator_UserTableName="View_Tran" msprop:Generator_RowChangedName="View_TranRowChanged" msprop:Generator_RowEvArgName="View_TranRowChangeEvent" msprop:Generator_RowClassName="View_TranRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TITLE" msprop:Generator_ColumnVarNameInTable="columnTITLE" msprop:Generator_ColumnPropNameInRow="TITLE" msprop:Generator_ColumnPropNameInTable="TITLEColumn" msprop:Generator_UserColumnName="TITLE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_LIB_TRANSACTION" msprop:Generator_ColumnVarNameInTable="columnID_LIB_TRANSACTION" msprop:Generator_ColumnPropNameInRow="ID_LIB_TRANSACTION" msprop:Generator_ColumnPropNameInTable="ID_LIB_TRANSACTIONColumn" msprop:Generator_UserColumnName="ID_LIB_TRANSACTION" type="xs:int" />
+              <xs:element name="TRANSACTION_DATE" msprop:Generator_ColumnVarNameInTable="columnTRANSACTION_DATE" msprop:Generator_ColumnPropNameInRow="TRANSACTION_DATE" msprop:Generator_ColumnPropNameInTable="TRANSACTION_DATEColumn" msprop:Generator_UserColumnName="TRANSACTION_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RETURN_DATE" msprop:Generator_ColumnVarNameInTable="columnRETURN_DATE" msprop:Generator_ColumnPropNameInRow="RETURN_DATE" msprop:Generator_ColumnPropNameInTable="RETURN_DATEColumn" msprop:Generator_UserColumnName="RETURN_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FIRST_NAME" msprop:Generator_ColumnVarNameInTable="columnFIRST_NAME" msprop:Generator_ColumnPropNameInRow="FIRST_NAME" msprop:Generator_ColumnPropNameInTable="FIRST_NAMEColumn" msprop:Generator_UserColumnName="FIRST_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LAST_NAME" msprop:Generator_ColumnVarNameInTable="columnLAST_NAME" msprop:Generator_ColumnPropNameInRow="LAST_NAME" msprop:Generator_ColumnPropNameInTable="LAST_NAMEColumn" msprop:Generator_UserColumnName="LAST_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -644,14 +695,18 @@ SELECT ID_SECTION, SECTION_NAME FROM SECTIONS WHERE (ID_SECTION = @ID_SECTION)</
       <xs:selector xpath=".//mstns:View_Book" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
+    <xs:unique name="View_Tran_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Tran" />
+      <xs:field xpath="mstns:ID_LIB_TRANSACTION" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_B2" msdata:parent="AUTHORS" msdata:child="BOOKS" msdata:parentkey="ID_AUTHOR" msdata:childkey="ID_AUTHOR" msprop:Generator_UserChildTable="BOOKS" msprop:Generator_ChildPropName="GetBOOKSRows" msprop:Generator_UserRelationName="FK_B2" msprop:Generator_ParentPropName="AUTHORSRow" msprop:Generator_RelationVarName="relationFK_B2" msprop:Generator_UserParentTable="AUTHORS" />
-      <msdata:Relationship name="FK_B3" msdata:parent="PUBLISHING_HOUSES" msdata:child="BOOKS" msdata:parentkey="ID_PUBLISHING_HOUSE" msdata:childkey="ID_PUBLISHING_HOUSE" msprop:Generator_UserChildTable="BOOKS" msprop:Generator_ChildPropName="GetBOOKSRows" msprop:Generator_UserRelationName="FK_B3" msprop:Generator_RelationVarName="relationFK_B3" msprop:Generator_UserParentTable="PUBLISHING_HOUSES" msprop:Generator_ParentPropName="PUBLISHING_HOUSESRow" />
-      <msdata:Relationship name="FK_B4" msdata:parent="SECTIONS" msdata:child="BOOKS" msdata:parentkey="ID_SECTION" msdata:childkey="ID_SECTION" msprop:Generator_UserChildTable="BOOKS" msprop:Generator_ChildPropName="GetBOOKSRows" msprop:Generator_UserRelationName="FK_B4" msprop:Generator_RelationVarName="relationFK_B4" msprop:Generator_UserParentTable="SECTIONS" msprop:Generator_ParentPropName="SECTIONSRow" />
-      <msdata:Relationship name="FK_TR1" msdata:parent="BOOKS" msdata:child="LIB_TRANSACTION" msdata:parentkey="ID_BOOK" msdata:childkey="ID_BOOK" msprop:Generator_UserChildTable="LIB_TRANSACTION" msprop:Generator_ChildPropName="GetLIB_TRANSACTIONRows" msprop:Generator_UserRelationName="FK_TR1" msprop:Generator_ParentPropName="BOOKSRow" msprop:Generator_RelationVarName="relationFK_TR1" msprop:Generator_UserParentTable="BOOKS" />
-      <msdata:Relationship name="FK_TR2" msdata:parent="USERS" msdata:child="LIB_TRANSACTION" msdata:parentkey="ID_USER" msdata:childkey="ID_USER" msprop:Generator_UserChildTable="LIB_TRANSACTION" msprop:Generator_ChildPropName="GetLIB_TRANSACTIONRows" msprop:Generator_UserRelationName="FK_TR2" msprop:Generator_ParentPropName="USERSRow" msprop:Generator_RelationVarName="relationFK_TR2" msprop:Generator_UserParentTable="USERS" />
+      <msdata:Relationship name="FK_B2" msdata:parent="AUTHORS" msdata:child="BOOKS" msdata:parentkey="ID_AUTHOR" msdata:childkey="ID_AUTHOR" msprop:Generator_UserChildTable="BOOKS" msprop:Generator_ChildPropName="GetBOOKSRows" msprop:Generator_UserRelationName="FK_B2" msprop:Generator_RelationVarName="relationFK_B2" msprop:Generator_UserParentTable="AUTHORS" msprop:Generator_ParentPropName="AUTHORSRow" />
+      <msdata:Relationship name="FK_B3" msdata:parent="PUBLISHING_HOUSES" msdata:child="BOOKS" msdata:parentkey="ID_PUBLISHING_HOUSE" msdata:childkey="ID_PUBLISHING_HOUSE" msprop:Generator_UserChildTable="BOOKS" msprop:Generator_ChildPropName="GetBOOKSRows" msprop:Generator_UserRelationName="FK_B3" msprop:Generator_ParentPropName="PUBLISHING_HOUSESRow" msprop:Generator_RelationVarName="relationFK_B3" msprop:Generator_UserParentTable="PUBLISHING_HOUSES" />
+      <msdata:Relationship name="FK_B4" msdata:parent="SECTIONS" msdata:child="BOOKS" msdata:parentkey="ID_SECTION" msdata:childkey="ID_SECTION" msprop:Generator_UserChildTable="BOOKS" msprop:Generator_ChildPropName="GetBOOKSRows" msprop:Generator_UserRelationName="FK_B4" msprop:Generator_ParentPropName="SECTIONSRow" msprop:Generator_RelationVarName="relationFK_B4" msprop:Generator_UserParentTable="SECTIONS" />
+      <msdata:Relationship name="FK_TR1" msdata:parent="BOOKS" msdata:child="LIB_TRANSACTION" msdata:parentkey="ID_BOOK" msdata:childkey="ID_BOOK" msprop:Generator_UserChildTable="LIB_TRANSACTION" msprop:Generator_ChildPropName="GetLIB_TRANSACTIONRows" msprop:Generator_UserRelationName="FK_TR1" msprop:Generator_RelationVarName="relationFK_TR1" msprop:Generator_UserParentTable="BOOKS" msprop:Generator_ParentPropName="BOOKSRow" />
+      <msdata:Relationship name="FK_TR2" msdata:parent="USERS" msdata:child="LIB_TRANSACTION" msdata:parentkey="ID_USER" msdata:childkey="ID_USER" msprop:Generator_UserChildTable="LIB_TRANSACTION" msprop:Generator_ChildPropName="GetLIB_TRANSACTIONRows" msprop:Generator_UserRelationName="FK_TR2" msprop:Generator_RelationVarName="relationFK_TR2" msprop:Generator_UserParentTable="USERS" msprop:Generator_ParentPropName="USERSRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

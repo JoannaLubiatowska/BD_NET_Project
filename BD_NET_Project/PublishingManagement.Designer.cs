@@ -241,7 +241,7 @@
             this.Controls.Add(this.pUBLISHING_HOUSESDataGridView);
             this.Controls.Add(this.pUBLISHING_HOUSESBindingNavigator);
             this.Name = "PublishingManagement";
-            this.Text = "PublishingManagement";
+            this.Text = "Wydawnictwa";
             this.Load += new System.EventHandler(this.PublishingManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pUBLISHING_HOUSESBindingSource)).EndInit();

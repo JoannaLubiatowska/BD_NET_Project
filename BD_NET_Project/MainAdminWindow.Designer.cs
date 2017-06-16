@@ -36,8 +36,7 @@
             this.buttonAuthor = new System.Windows.Forms.Button();
             this.buttonBook = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonTransactionStatistic = new System.Windows.Forms.Button();
-            this.buttonUserStatistic = new System.Windows.Forms.Button();
+            this.buttonStatistic = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -119,34 +118,23 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.buttonTransactionStatistic);
-            this.groupBox2.Controls.Add(this.buttonUserStatistic);
+            this.groupBox2.Controls.Add(this.buttonStatistic);
             this.groupBox2.Location = new System.Drawing.Point(174, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(146, 226);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Statystyki";
+            this.groupBox2.Text = "Inne";
             // 
-            // buttonTransactionStatistic
+            // buttonStatistic
             // 
-            this.buttonTransactionStatistic.Location = new System.Drawing.Point(18, 63);
-            this.buttonTransactionStatistic.Name = "buttonTransactionStatistic";
-            this.buttonTransactionStatistic.Size = new System.Drawing.Size(98, 23);
-            this.buttonTransactionStatistic.TabIndex = 5;
-            this.buttonTransactionStatistic.Text = "Wypożyczenia";
-            this.buttonTransactionStatistic.UseVisualStyleBackColor = true;
-            this.buttonTransactionStatistic.Click += new System.EventHandler(this.buttonTransactionStatistic_Click);
-            // 
-            // buttonUserStatistic
-            // 
-            this.buttonUserStatistic.Location = new System.Drawing.Point(18, 34);
-            this.buttonUserStatistic.Name = "buttonUserStatistic";
-            this.buttonUserStatistic.Size = new System.Drawing.Size(98, 23);
-            this.buttonUserStatistic.TabIndex = 4;
-            this.buttonUserStatistic.Text = "Czytelnicy";
-            this.buttonUserStatistic.UseVisualStyleBackColor = true;
-            this.buttonUserStatistic.Click += new System.EventHandler(this.buttonUserStatistic_Click);
+            this.buttonStatistic.Location = new System.Drawing.Point(21, 34);
+            this.buttonStatistic.Name = "buttonStatistic";
+            this.buttonStatistic.Size = new System.Drawing.Size(98, 23);
+            this.buttonStatistic.TabIndex = 4;
+            this.buttonStatistic.Text = "Statystyki";
+            this.buttonStatistic.UseVisualStyleBackColor = true;
+            this.buttonStatistic.Click += new System.EventHandler(this.buttonStatistic_Click);
             // 
             // MainAdminWindow
             // 
@@ -156,7 +144,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "MainAdminWindow";
-            this.Text = "MainAdminWindow";
+            this.Text = "Okno główne administratora";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -173,7 +161,6 @@
         private System.Windows.Forms.Button buttonAuthor;
         private System.Windows.Forms.Button buttonBook;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button buttonTransactionStatistic;
-        private System.Windows.Forms.Button buttonUserStatistic;
+        private System.Windows.Forms.Button buttonStatistic;
     }
 }
