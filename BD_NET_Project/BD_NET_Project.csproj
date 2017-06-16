@@ -64,6 +64,7 @@
     <Compile Include="BookManagement.Designer.cs">
       <DependentUpon>BookManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComboBoxItem.cs" />
     <Compile Include="DataSet.cs">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>

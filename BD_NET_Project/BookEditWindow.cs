@@ -16,5 +16,15 @@ namespace BD_NET_Project
         {
             InitializeComponent();
         }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
