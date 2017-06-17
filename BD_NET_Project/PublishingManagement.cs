@@ -22,7 +22,7 @@ namespace BD_NET_Project
             this.Validate();
             this.pUBLISHING_HOUSESBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dataSet);
-
+            MessageBox.Show("Zapisano");
         }
 
         private void PublishingManagement_Load(object sender, EventArgs e)

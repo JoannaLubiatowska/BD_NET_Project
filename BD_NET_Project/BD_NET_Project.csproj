@@ -105,6 +105,7 @@
     <Compile Include="Statistic.Designer.cs">
       <DependentUpon>Statistic.cs</DependentUpon>
     </Compile>
+    <Compile Include="StringCipher.cs" />
     <Compile Include="TransactionManagement.cs">
       <SubType>Form</SubType>
     </Compile>

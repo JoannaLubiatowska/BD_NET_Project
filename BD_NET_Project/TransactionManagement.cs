@@ -15,6 +15,7 @@ namespace BD_NET_Project
     {
         private SqlConnection connection;
         private SqlDataAdapter adapter;
+
         public TransactionManagement()
         {
             InitializeComponent();

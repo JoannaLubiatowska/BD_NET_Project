@@ -32,7 +32,13 @@ namespace BD_NET_Project
             }
             if (IsOpen == false)
             {
-                if (textBoxLogin.Text == "AdminNET" && textBoxPassword.Text == "12345")
+                string password = "AdminNET";
+                string plaintext = "12345";
+
+                string encryptedstring = StringCipher.Encrypt(plaintext, password);
+                string decryptedstring = StringCipher.Decrypt(encryptedstring, password);
+
+                if (textBoxLogin.Text == "AdminNET" && textBoxPassword.Text == decryptedstring)
                 {
                     MainAdminWindow w = new MainAdminWindow();
                     w.Show();

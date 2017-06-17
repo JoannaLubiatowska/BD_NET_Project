@@ -22,7 +22,7 @@ namespace BD_NET_Project
             this.Validate();
             this.sECTIONSBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dataSet);
-
+            MessageBox.Show("Zapisano");
         }
 
         private void SectionManagement_Load(object sender, EventArgs e)
