@@ -13,10 +13,13 @@ namespace BD_NET_Project
 {
     public partial class MainAdminWindow : Form
     {
+        private SqlDataAdapter adapter;
         private SqlConnection connection;
         public MainAdminWindow()
         {
             InitializeComponent();
+            connection = new SqlConnection("Data Source=ASIA-HP;Initial Catalog=LIBRARY;Persist Security Info=True;User ID=sa;Password=praktyka");
+
         }
 
         private void buttonBook_Click(object sender, EventArgs e)
@@ -79,6 +82,22 @@ namespace BD_NET_Project
             {
                 Statistic b = new Statistic();
                 b.Show();
+            }
+        }
+
+        private void buttonBD_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                adapter = new SqlDataAdapter("getNewDataBase", connection);
+                adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                MessageBox.Show("Wykonano.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

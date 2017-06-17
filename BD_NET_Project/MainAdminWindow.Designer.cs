@@ -37,6 +37,7 @@
             this.buttonBook = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonStatistic = new System.Windows.Forms.Button();
+            this.buttonBD = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -118,6 +119,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.buttonBD);
             this.groupBox2.Controls.Add(this.buttonStatistic);
             this.groupBox2.Location = new System.Drawing.Point(174, 12);
             this.groupBox2.Name = "groupBox2";
@@ -135,6 +137,16 @@
             this.buttonStatistic.Text = "Statystyki";
             this.buttonStatistic.UseVisualStyleBackColor = true;
             this.buttonStatistic.Click += new System.EventHandler(this.buttonStatistic_Click);
+            // 
+            // buttonBD
+            // 
+            this.buttonBD.Location = new System.Drawing.Point(21, 121);
+            this.buttonBD.Name = "buttonBD";
+            this.buttonBD.Size = new System.Drawing.Size(98, 81);
+            this.buttonBD.TabIndex = 5;
+            this.buttonBD.Text = "Skasuj starą \r\nbazę danych\r\ni inicjalizuj\r\nnową";
+            this.buttonBD.UseVisualStyleBackColor = true;
+            this.buttonBD.Click += new System.EventHandler(this.buttonBD_Click);
             // 
             // MainAdminWindow
             // 
@@ -162,5 +174,6 @@
         private System.Windows.Forms.Button buttonBook;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonStatistic;
+        private System.Windows.Forms.Button buttonBD;
     }
 }
