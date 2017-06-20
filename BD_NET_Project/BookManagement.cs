@@ -39,7 +39,7 @@ namespace BD_NET_Project
             }
             if (IsOpen == false)
             {
-                BookEditWindow w = new BookEditWindow();
+                BookEditWindow w = new BookEditWindow((DataRowView)this.view_BookBindingSource.Current);
                 w.Show();
             }
         }

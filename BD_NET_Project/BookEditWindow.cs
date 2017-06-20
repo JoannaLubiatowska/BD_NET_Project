@@ -19,7 +19,7 @@ namespace BD_NET_Project
         private DataRow element;
         private DataTable book;
 
-        public BookEditWindow()
+        public BookEditWindow(DataRowView row)
         {
             InitializeComponent();
             connection = new SqlConnection("Data Source=ASIA-HP;Initial Catalog=LIBRARY;Persist Security Info=True;User ID=sa;Password=praktyka");
@@ -28,6 +28,8 @@ namespace BD_NET_Project
             Update_combobox(new DataTable("AUTHORS"), comboBoxAuthor, "select * from AUTHORS", "FIRST_NAME", "LAST_NAME");
             Update_combobox(new DataTable("PUBLISHING_HOUSES"), comboBoxPublishing, "select * from PUBLISHING_HOUSES", "ID_PUBLISHING_HOUSE", "PUBLISHING_NAME");
             Update_combobox(new DataTable("SECTIONS"), comboBoxSection, "select * from SECTIONS", "ID_SECTION", "SECTION_NAME");
+
+            comboBoxTitle.SelectedItem = comboBoxTitle.Items.Cast<ComboBoxItem>().Where(title => title.Hidden["ID_BOOK"].ToString().Equals(row["ID"].ToString())).Single();
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)

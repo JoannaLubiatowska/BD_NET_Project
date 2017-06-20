@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,15 @@ namespace BD_NET_Project
 {
     public partial class Login : Form
     {
+        private SqlConnection connection;
+        private SqlDataAdapter adapter;
+        string password;
+        string plaintext;
         public Login()
         {
             InitializeComponent();
+            connection = new SqlConnection("Data Source=ASIA-HP;Initial Catalog=LIBRARY;Persist Security Info=True;User ID=AdminNET;Password=12345");
+            adapter = new SqlDataAdapter();
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
@@ -32,20 +39,31 @@ namespace BD_NET_Project
             }
             if (IsOpen == false)
             {
-                string password = "AdminNET";
-                string plaintext = "12345";
-
-                string encryptedstring = StringCipher.Encrypt(plaintext, password);
-                string decryptedstring = StringCipher.Decrypt(encryptedstring, password);
-
-                if (textBoxLogin.Text == "AdminNET" && textBoxPassword.Text == decryptedstring)
+                try
                 {
-                    MainAdminWindow w = new MainAdminWindow();
-                    w.Show();
+                    DataTable temp = new DataTable();
+                    SqlCommand command = new SqlCommand("select * from ADMINS", connection);
+                    adapter.SelectCommand = command;
+                    adapter.Fill(temp);
+                    adapter.Update(temp);
+                    password = temp.Rows[0]["ADMIN_LOGIN"].ToString();
+                    plaintext = temp.Rows[0]["ADMIN_PASSWORD"].ToString();
+                    string encryptedstring = StringCipher.Encrypt(plaintext, password);
+                    string decryptedstring = StringCipher.Decrypt(encryptedstring, password);
+
+                    if (textBoxLogin.Text == password && textBoxPassword.Text == decryptedstring)
+                    {
+                        MainAdminWindow w = new MainAdminWindow();
+                        w.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Login lub hasło nieprawidłowe. Spróbuj ponownie.");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Login lub hasło nieprawidłowe. Spróbuj ponownie.");
+                    MessageBox.Show(ex.Message);
                 }
             }
         }

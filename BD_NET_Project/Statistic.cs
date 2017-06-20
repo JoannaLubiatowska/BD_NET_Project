@@ -76,5 +76,19 @@ namespace BD_NET_Project
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Statistic_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dataSet.LIB_TRANSACTION' table. You can move, or remove it, as needed.
+            this.lIB_TRANSACTIONTableAdapter.Fill(this.dataSet.LIB_TRANSACTION);
+            // TODO: This line of code loads data into the 'dataSet.USERS' table. You can move, or remove it, as needed.
+            this.uSERSTableAdapter.Fill(this.dataSet.USERS);
+
+        }
+
+        private void Statystyki_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

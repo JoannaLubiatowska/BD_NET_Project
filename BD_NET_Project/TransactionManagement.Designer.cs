@@ -59,6 +59,12 @@
             this.rETURN_DATEDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.view_TranBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_TranTableAdapter = new BD_NET_Project.DataSetTableAdapters.View_TranTableAdapter();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.comboBoxUser = new System.Windows.Forms.ComboBox();
+            this.comboBoxBook = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.view_TranDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,12 +72,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.comboBoxUser = new System.Windows.Forms.ComboBox();
-            this.comboBoxBook = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             iD_LIB_TRANSACTIONLabel = new System.Windows.Forms.Label();
             iD_BOOKLabel = new System.Windows.Forms.Label();
             iD_USERLabel = new System.Windows.Forms.Label();
@@ -82,8 +83,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lIB_TRANSACTIONBindingNavigator)).BeginInit();
             this.lIB_TRANSACTIONBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.view_TranBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.view_TranDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.view_TranDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // iD_LIB_TRANSACTIONLabel
@@ -182,7 +183,7 @@
             this.lIB_TRANSACTIONBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.lIB_TRANSACTIONBindingNavigator.Name = "lIB_TRANSACTIONBindingNavigator";
             this.lIB_TRANSACTIONBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.lIB_TRANSACTIONBindingNavigator.Size = new System.Drawing.Size(667, 25);
+            this.lIB_TRANSACTIONBindingNavigator.Size = new System.Drawing.Size(769, 25);
             this.lIB_TRANSACTIONBindingNavigator.TabIndex = 0;
             this.lIB_TRANSACTIONBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -329,59 +330,6 @@
             // 
             this.view_TranTableAdapter.ClearBeforeFill = true;
             // 
-            // view_TranDataGridView
-            // 
-            this.view_TranDataGridView.AutoGenerateColumns = false;
-            this.view_TranDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.view_TranDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.view_TranDataGridView.DataSource = this.view_TranBindingSource;
-            this.view_TranDataGridView.Location = new System.Drawing.Point(12, 196);
-            this.view_TranDataGridView.Name = "view_TranDataGridView";
-            this.view_TranDataGridView.Size = new System.Drawing.Size(644, 220);
-            this.view_TranDataGridView.TabIndex = 11;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "TITLE";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Tytuł";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID_LIB_TRANSACTION";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Numer wypożyczenia";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "TRANSACTION_DATE";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Data wypożyczenia";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "RETURN_DATE";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Data zwrotu";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "FIRST_NAME";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Imię czytelnika";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "LAST_NAME";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Nazwisko czytelnika";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.buttonSave);
@@ -389,7 +337,7 @@
             this.groupBox1.Controls.Add(this.comboBoxBook);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(350, 26);
+            this.groupBox1.Location = new System.Drawing.Point(396, 28);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(305, 152);
             this.groupBox1.TabIndex = 12;
@@ -440,13 +388,73 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Książka:";
             // 
+            // view_TranDataGridView
+            // 
+            this.view_TranDataGridView.AutoGenerateColumns = false;
+            this.view_TranDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.view_TranDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.view_TranDataGridView.DataSource = this.view_TranBindingSource;
+            this.view_TranDataGridView.Location = new System.Drawing.Point(12, 201);
+            this.view_TranDataGridView.Name = "view_TranDataGridView";
+            this.view_TranDataGridView.Size = new System.Drawing.Size(743, 240);
+            this.view_TranDataGridView.TabIndex = 12;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "TITLE";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Tytuł";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID_LIB_TRANSACTION";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Numer wypożyczenia";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "TRANSACTION_DATE";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Data wypożyczenia";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "RETURN_DATE";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Data zwrotu";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ID_USER";
+            this.dataGridViewTextBoxColumn5.HeaderText = "ID użytkownika";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "FIRST_NAME";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Imię czytelnika";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "LAST_NAME";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Nazwisko użytkownika";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
             // TransactionManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 426);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(769, 453);
             this.Controls.Add(this.view_TranDataGridView);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(iD_LIB_TRANSACTIONLabel);
             this.Controls.Add(this.iD_LIB_TRANSACTIONTextBox);
             this.Controls.Add(iD_BOOKLabel);
@@ -467,9 +475,9 @@
             this.lIB_TRANSACTIONBindingNavigator.ResumeLayout(false);
             this.lIB_TRANSACTIONBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.view_TranBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.view_TranDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.view_TranDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -501,18 +509,19 @@
         private System.Windows.Forms.DateTimePicker rETURN_DATEDateTimePicker;
         private System.Windows.Forms.BindingSource view_TranBindingSource;
         private DataSetTableAdapters.View_TranTableAdapter view_TranTableAdapter;
-        private System.Windows.Forms.DataGridView view_TranDataGridView;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.ComboBox comboBoxUser;
         private System.Windows.Forms.ComboBox comboBoxBook;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView view_TranDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

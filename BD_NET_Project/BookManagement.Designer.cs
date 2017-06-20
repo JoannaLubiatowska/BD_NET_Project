@@ -34,7 +34,6 @@
             System.Windows.Forms.Label nazwisko_autoraLabel;
             System.Windows.Forms.Label wydawnictwoLabel;
             System.Windows.Forms.Label działLabel;
-            System.Windows.Forms.Label iDLabel;
             System.Windows.Forms.Label data_wydaniaLabel;
             System.Windows.Forms.Label opisLabel;
             System.Windows.Forms.Label iSBNLabel;
@@ -58,7 +57,6 @@
             this.nazwisko_autoraTextBox = new System.Windows.Forms.TextBox();
             this.wydawnictwoTextBox = new System.Windows.Forms.TextBox();
             this.działTextBox = new System.Windows.Forms.TextBox();
-            this.iDTextBox = new System.Windows.Forms.TextBox();
             this.data_wydaniaTextBox = new System.Windows.Forms.TextBox();
             this.okładkaPictureBox = new System.Windows.Forms.PictureBox();
             this.opisTextBox = new System.Windows.Forms.TextBox();
@@ -69,7 +67,6 @@
             nazwisko_autoraLabel = new System.Windows.Forms.Label();
             wydawnictwoLabel = new System.Windows.Forms.Label();
             działLabel = new System.Windows.Forms.Label();
-            iDLabel = new System.Windows.Forms.Label();
             data_wydaniaLabel = new System.Windows.Forms.Label();
             opisLabel = new System.Windows.Forms.Label();
             iSBNLabel = new System.Windows.Forms.Label();
@@ -83,7 +80,7 @@
             // tytułLabel
             // 
             tytułLabel.AutoSize = true;
-            tytułLabel.Location = new System.Drawing.Point(12, 116);
+            tytułLabel.Location = new System.Drawing.Point(12, 71);
             tytułLabel.Name = "tytułLabel";
             tytułLabel.Size = new System.Drawing.Size(35, 13);
             tytułLabel.TabIndex = 1;
@@ -92,7 +89,7 @@
             // imię_autoraLabel
             // 
             imię_autoraLabel.AutoSize = true;
-            imię_autoraLabel.Location = new System.Drawing.Point(12, 142);
+            imię_autoraLabel.Location = new System.Drawing.Point(12, 97);
             imię_autoraLabel.Name = "imię_autoraLabel";
             imię_autoraLabel.Size = new System.Drawing.Size(62, 13);
             imię_autoraLabel.TabIndex = 3;
@@ -101,7 +98,7 @@
             // nazwisko_autoraLabel
             // 
             nazwisko_autoraLabel.AutoSize = true;
-            nazwisko_autoraLabel.Location = new System.Drawing.Point(12, 168);
+            nazwisko_autoraLabel.Location = new System.Drawing.Point(12, 123);
             nazwisko_autoraLabel.Name = "nazwisko_autoraLabel";
             nazwisko_autoraLabel.Size = new System.Drawing.Size(89, 13);
             nazwisko_autoraLabel.TabIndex = 5;
@@ -110,7 +107,7 @@
             // wydawnictwoLabel
             // 
             wydawnictwoLabel.AutoSize = true;
-            wydawnictwoLabel.Location = new System.Drawing.Point(12, 194);
+            wydawnictwoLabel.Location = new System.Drawing.Point(12, 149);
             wydawnictwoLabel.Name = "wydawnictwoLabel";
             wydawnictwoLabel.Size = new System.Drawing.Size(77, 13);
             wydawnictwoLabel.TabIndex = 7;
@@ -119,25 +116,16 @@
             // działLabel
             // 
             działLabel.AutoSize = true;
-            działLabel.Location = new System.Drawing.Point(12, 220);
+            działLabel.Location = new System.Drawing.Point(12, 175);
             działLabel.Name = "działLabel";
             działLabel.Size = new System.Drawing.Size(35, 13);
             działLabel.TabIndex = 9;
             działLabel.Text = "Dział:";
             // 
-            // iDLabel
-            // 
-            iDLabel.AutoSize = true;
-            iDLabel.Location = new System.Drawing.Point(12, 86);
-            iDLabel.Name = "iDLabel";
-            iDLabel.Size = new System.Drawing.Size(21, 13);
-            iDLabel.TabIndex = 11;
-            iDLabel.Text = "ID:";
-            // 
             // data_wydaniaLabel
             // 
             data_wydaniaLabel.AutoSize = true;
-            data_wydaniaLabel.Location = new System.Drawing.Point(12, 246);
+            data_wydaniaLabel.Location = new System.Drawing.Point(12, 201);
             data_wydaniaLabel.Name = "data_wydaniaLabel";
             data_wydaniaLabel.Size = new System.Drawing.Size(75, 13);
             data_wydaniaLabel.TabIndex = 13;
@@ -146,7 +134,7 @@
             // opisLabel
             // 
             opisLabel.AutoSize = true;
-            opisLabel.Location = new System.Drawing.Point(12, 298);
+            opisLabel.Location = new System.Drawing.Point(12, 253);
             opisLabel.Name = "opisLabel";
             opisLabel.Size = new System.Drawing.Size(31, 13);
             opisLabel.TabIndex = 17;
@@ -155,7 +143,7 @@
             // iSBNLabel
             // 
             iSBNLabel.AutoSize = true;
-            iSBNLabel.Location = new System.Drawing.Point(12, 272);
+            iSBNLabel.Location = new System.Drawing.Point(12, 227);
             iSBNLabel.Name = "iSBNLabel";
             iSBNLabel.Size = new System.Drawing.Size(35, 13);
             iSBNLabel.TabIndex = 19;
@@ -284,7 +272,7 @@
             // tytułTextBox
             // 
             this.tytułTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "Tytuł", true));
-            this.tytułTextBox.Location = new System.Drawing.Point(107, 113);
+            this.tytułTextBox.Location = new System.Drawing.Point(107, 68);
             this.tytułTextBox.Name = "tytułTextBox";
             this.tytułTextBox.Size = new System.Drawing.Size(199, 20);
             this.tytułTextBox.TabIndex = 2;
@@ -292,7 +280,7 @@
             // imię_autoraTextBox
             // 
             this.imię_autoraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "Imię autora]", true));
-            this.imię_autoraTextBox.Location = new System.Drawing.Point(107, 139);
+            this.imię_autoraTextBox.Location = new System.Drawing.Point(107, 94);
             this.imię_autoraTextBox.Name = "imię_autoraTextBox";
             this.imię_autoraTextBox.Size = new System.Drawing.Size(199, 20);
             this.imię_autoraTextBox.TabIndex = 4;
@@ -300,7 +288,7 @@
             // nazwisko_autoraTextBox
             // 
             this.nazwisko_autoraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "Nazwisko autora", true));
-            this.nazwisko_autoraTextBox.Location = new System.Drawing.Point(107, 165);
+            this.nazwisko_autoraTextBox.Location = new System.Drawing.Point(107, 120);
             this.nazwisko_autoraTextBox.Name = "nazwisko_autoraTextBox";
             this.nazwisko_autoraTextBox.Size = new System.Drawing.Size(199, 20);
             this.nazwisko_autoraTextBox.TabIndex = 6;
@@ -308,7 +296,7 @@
             // wydawnictwoTextBox
             // 
             this.wydawnictwoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "Wydawnictwo", true));
-            this.wydawnictwoTextBox.Location = new System.Drawing.Point(107, 191);
+            this.wydawnictwoTextBox.Location = new System.Drawing.Point(107, 146);
             this.wydawnictwoTextBox.Name = "wydawnictwoTextBox";
             this.wydawnictwoTextBox.Size = new System.Drawing.Size(199, 20);
             this.wydawnictwoTextBox.TabIndex = 8;
@@ -316,23 +304,15 @@
             // działTextBox
             // 
             this.działTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "Dział", true));
-            this.działTextBox.Location = new System.Drawing.Point(107, 217);
+            this.działTextBox.Location = new System.Drawing.Point(107, 172);
             this.działTextBox.Name = "działTextBox";
             this.działTextBox.Size = new System.Drawing.Size(199, 20);
             this.działTextBox.TabIndex = 10;
             // 
-            // iDTextBox
-            // 
-            this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "ID", true));
-            this.iDTextBox.Location = new System.Drawing.Point(107, 83);
-            this.iDTextBox.Name = "iDTextBox";
-            this.iDTextBox.Size = new System.Drawing.Size(199, 20);
-            this.iDTextBox.TabIndex = 12;
-            // 
             // data_wydaniaTextBox
             // 
             this.data_wydaniaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "Data wydania", true));
-            this.data_wydaniaTextBox.Location = new System.Drawing.Point(107, 243);
+            this.data_wydaniaTextBox.Location = new System.Drawing.Point(107, 198);
             this.data_wydaniaTextBox.Name = "data_wydaniaTextBox";
             this.data_wydaniaTextBox.Size = new System.Drawing.Size(199, 20);
             this.data_wydaniaTextBox.TabIndex = 14;
@@ -350,7 +330,7 @@
             // opisTextBox
             // 
             this.opisTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "Opis", true));
-            this.opisTextBox.Location = new System.Drawing.Point(107, 295);
+            this.opisTextBox.Location = new System.Drawing.Point(107, 250);
             this.opisTextBox.Multiline = true;
             this.opisTextBox.Name = "opisTextBox";
             this.opisTextBox.Size = new System.Drawing.Size(199, 52);
@@ -359,7 +339,7 @@
             // iSBNTextBox
             // 
             this.iSBNTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_BookBindingSource, "ISBN", true));
-            this.iSBNTextBox.Location = new System.Drawing.Point(107, 269);
+            this.iSBNTextBox.Location = new System.Drawing.Point(107, 224);
             this.iSBNTextBox.Name = "iSBNTextBox";
             this.iSBNTextBox.Size = new System.Drawing.Size(199, 20);
             this.iSBNTextBox.TabIndex = 20;
@@ -390,8 +370,6 @@
             this.Controls.Add(this.wydawnictwoTextBox);
             this.Controls.Add(działLabel);
             this.Controls.Add(this.działTextBox);
-            this.Controls.Add(iDLabel);
-            this.Controls.Add(this.iDTextBox);
             this.Controls.Add(data_wydaniaLabel);
             this.Controls.Add(this.data_wydaniaTextBox);
             this.Controls.Add(this.okładkaPictureBox);
@@ -434,7 +412,6 @@
         private System.Windows.Forms.TextBox nazwisko_autoraTextBox;
         private System.Windows.Forms.TextBox wydawnictwoTextBox;
         private System.Windows.Forms.TextBox działTextBox;
-        private System.Windows.Forms.TextBox iDTextBox;
         private System.Windows.Forms.TextBox data_wydaniaTextBox;
         private System.Windows.Forms.PictureBox okładkaPictureBox;
         private System.Windows.Forms.TextBox opisTextBox;

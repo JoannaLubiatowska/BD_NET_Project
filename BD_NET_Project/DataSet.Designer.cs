@@ -2907,6 +2907,8 @@ namespace BD_NET_Project {
             
             private global::System.Data.DataColumn columnRETURN_DATE;
             
+            private global::System.Data.DataColumn columnID_USER;
+            
             private global::System.Data.DataColumn columnFIRST_NAME;
             
             private global::System.Data.DataColumn columnLAST_NAME;
@@ -2978,6 +2980,14 @@ namespace BD_NET_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_USERColumn {
+                get {
+                    return this.columnID_USER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn FIRST_NAMEColumn {
                 get {
                     return this.columnFIRST_NAME;
@@ -3029,25 +3039,19 @@ namespace BD_NET_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public View_TranRow AddView_TranRow(string TITLE, int ID_LIB_TRANSACTION, System.DateTime TRANSACTION_DATE, System.DateTime RETURN_DATE, string FIRST_NAME, string LAST_NAME) {
+            public View_TranRow AddView_TranRow(string TITLE, int ID_LIB_TRANSACTION, System.DateTime TRANSACTION_DATE, System.DateTime RETURN_DATE, int ID_USER, string FIRST_NAME, string LAST_NAME) {
                 View_TranRow rowView_TranRow = ((View_TranRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TITLE,
                         ID_LIB_TRANSACTION,
                         TRANSACTION_DATE,
                         RETURN_DATE,
+                        ID_USER,
                         FIRST_NAME,
                         LAST_NAME};
                 rowView_TranRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowView_TranRow);
                 return rowView_TranRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public View_TranRow FindByID_LIB_TRANSACTION(int ID_LIB_TRANSACTION) {
-                return ((View_TranRow)(this.Rows.Find(new object[] {
-                            ID_LIB_TRANSACTION})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3071,6 +3075,7 @@ namespace BD_NET_Project {
                 this.columnID_LIB_TRANSACTION = base.Columns["ID_LIB_TRANSACTION"];
                 this.columnTRANSACTION_DATE = base.Columns["TRANSACTION_DATE"];
                 this.columnRETURN_DATE = base.Columns["RETURN_DATE"];
+                this.columnID_USER = base.Columns["ID_USER"];
                 this.columnFIRST_NAME = base.Columns["FIRST_NAME"];
                 this.columnLAST_NAME = base.Columns["LAST_NAME"];
             }
@@ -3086,16 +3091,16 @@ namespace BD_NET_Project {
                 base.Columns.Add(this.columnTRANSACTION_DATE);
                 this.columnRETURN_DATE = new global::System.Data.DataColumn("RETURN_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRETURN_DATE);
+                this.columnID_USER = new global::System.Data.DataColumn("ID_USER", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_USER);
                 this.columnFIRST_NAME = new global::System.Data.DataColumn("FIRST_NAME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFIRST_NAME);
                 this.columnLAST_NAME = new global::System.Data.DataColumn("LAST_NAME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLAST_NAME);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_LIB_TRANSACTION}, true));
                 this.columnTITLE.AllowDBNull = false;
                 this.columnTITLE.MaxLength = 100;
                 this.columnID_LIB_TRANSACTION.AllowDBNull = false;
-                this.columnID_LIB_TRANSACTION.Unique = true;
+                this.columnID_USER.AllowDBNull = false;
                 this.columnFIRST_NAME.AllowDBNull = false;
                 this.columnFIRST_NAME.MaxLength = 50;
                 this.columnLAST_NAME.AllowDBNull = false;
@@ -4054,6 +4059,17 @@ namespace BD_NET_Project {
                 }
                 set {
                     this[this.tableView_Tran.RETURN_DATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID_USER {
+                get {
+                    return ((int)(this[this.tableView_Tran.ID_USERColumn]));
+                }
+                set {
+                    this[this.tableView_Tran.ID_USERColumn] = value;
                 }
             }
             
@@ -7019,6 +7035,7 @@ SELECT ID_PUBLISHING_HOUSE, PUBLISHING_NAME FROM PUBLISHING_HOUSES WHERE (ID_PUB
             tableMapping.ColumnMappings.Add("ID_LIB_TRANSACTION", "ID_LIB_TRANSACTION");
             tableMapping.ColumnMappings.Add("TRANSACTION_DATE", "TRANSACTION_DATE");
             tableMapping.ColumnMappings.Add("RETURN_DATE", "RETURN_DATE");
+            tableMapping.ColumnMappings.Add("ID_USER", "ID_USER");
             tableMapping.ColumnMappings.Add("FIRST_NAME", "FIRST_NAME");
             tableMapping.ColumnMappings.Add("LAST_NAME", "LAST_NAME");
             this._adapter.TableMappings.Add(tableMapping);
@@ -7037,8 +7054,8 @@ SELECT ID_PUBLISHING_HOUSE, PUBLISHING_NAME FROM PUBLISHING_HOUSES WHERE (ID_PUB
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT TITLE, ID_LIB_TRANSACTION, TRANSACTION_DATE, RETURN_DATE, FIRST_NAME, LAST" +
-                "_NAME FROM dbo.View_Tran";
+            this._commandCollection[0].CommandText = "SELECT TITLE, ID_LIB_TRANSACTION, TRANSACTION_DATE, RETURN_DATE, ID_USER, FIRST_N" +
+                "AME, LAST_NAME FROM dbo.View_Tran";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
